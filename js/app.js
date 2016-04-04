@@ -6,6 +6,16 @@ localStorage should store:
 4. whether user has begun exercises
 5. image viewed when user last left page
 6. previous visit dates and respective "level reached" numbers (for chart)
-7.
 
 */
+
+//OBJECT THAT WILL BE STORED IN LOCALSTORAGE AND WILL TRACK USER DETAILS/PROGRESS
+var userInfo {
+  evalComplete: false;
+  userName: '';
+  panicImage: '';
+  recommendedStartImage: '';
+  exercisesBegun: false;
+  lastViewedImage: '';
+  previousVisitData: [];
+}
