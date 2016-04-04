@@ -11,3 +11,5 @@
 9.  Color close-up spider photography.
 10. videos of people handling real tarantualas.
 11. Videos of spider scenes in cinema.
+
+Some images taken from <a href="http://cliparts.co">Clipart.co</a>
