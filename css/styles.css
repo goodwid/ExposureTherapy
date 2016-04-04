@@ -12,16 +12,23 @@ body {
 header {
     background-color: #8ecea5;
     color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    
 }
 
 nav ul li {
     font-size: 22px;
-    width: 100px;
+    width: 120px;
+    list-style-type: none;
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
-    display: inline;
     color: #FFFFFF;
 }
 
