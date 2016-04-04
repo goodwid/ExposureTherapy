@@ -5,7 +5,7 @@
 
 * If you see a spider 10 feet away from you, how anxious or uncomfortable do you feel?
 
-* If you were to watch a non-animated video featuring spiders, how anxious or uncomfortable would you feel?
+* If you were to watch a non-animated video featuring a spider, how anxious or uncomfortable would you feel?
 
 
 ### TRUE/FALSE
