@@ -7,7 +7,17 @@ header {
 }
 
 nav {
+  background-color: #8ecea5;
 
+}
+
+nav a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttonStyle{
+  background-color: #f4a126;
 }
 
 section {
