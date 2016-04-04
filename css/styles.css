@@ -1,23 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
 body {
     background-color:  #FFFFFF;
 }
 
 header {
-
+    background-color: #8ecea5;
+    color: #FFFFFF;
 }
 
-nav {
-  background-color: #8ecea5;
-
+nav ul li {
+    font-size: 22px;
+    width: 100px;
 }
 
-nav a{
-  text-decoration: none;
-  display: inline-block;
+nav ul li a {
+    text-decoration: none;
+    display: inline;
+    color: #FFFFFF;
 }
 
 .buttonStyle{
-  background-color: #f4a126;
+    background-color: #f4a126;
 }
 
 section {
