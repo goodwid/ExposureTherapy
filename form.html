@@ -18,59 +18,72 @@
                 </ul>
             </nav>
         </header>
+            <form id="questionForm">
+                <div id="formWrapper">
+                    <div id="formHeader">
+                        <h3>Let's get you started</h3>
+                        <p>Answering the following questions will help us start you at the level best suited for your needs.</p>
+                    </div></br>
 
-        <form>
-            <div id="formWrapper">
-                <!-- <div id="formHeader">
-                    <h3>Let's get you started</h3>
-                    <p>Answering the following questions will help us start you at the level best suited for your needs.</p>
-                </div></br>
+                    <p class=questionTxt>What's your first name?
+                    <input id="inputName" type=text size="35" required>
+                    </p></br>
 
-                <p class=questionTxt>What's your first name?
-                <input id="inputName" type=text size="35"  />
-                </p></br>
+                    <div id="qPhobiaType">
+                        <p class="questionTxt">What phobia will you be addressing?
+                        <label class="radio-inline"><input type=radio name="phobia" value="arach" checked>Arachnophobia</label>
+                        <label class="radio-inline"><input type=radio name="phobia" value="other">Other</label>
+                        </p>
+                    </div>
 
-                <div id="qPhobiaType">
-                    <p class="questionTxt">What phobia will you be addressing?
-                    <label class="radio-inline"><input id="arach" type=radio value="arach">Arachnophobia</label>
-                    <label class="radio-inline"><input id="other" type=radio value="other">Other</label>
-                    </p>
-                </div> -->
+                    <div id="qPhobiaType">
+                        <p class="questionTxt">What is your preferred pleasing imagery?
+                        <label class="radio-inline"><input type=radio name="panicimage" value="puppies">Puppies</label>
+                        <label class="radio-inline"><input type=radio name="panicimage" value="kittens" checked>Kittens</label>
+                        <label class="radio-inline"><input type=radio name="panicimage" value="scenery">Scenery</label>
 
-                <div class="tfQuestions">
-                    <p class="tfQuestionTxt">Question Six...?</p>
-                    <label class="radio-inline"><input id="q1True" type=radio name="question6" value=true> True</label>
-                    <label class="radio-inline"><input id="q1False" type=radio  name="question6" value=false> False</label>
-                </div></br>
+                        </p>
+                    </div>
 
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">I feel anxious or uncomfortable seeing the word "spider" or hearing someone say the word "spider."</p>
+                            <label class="radio-inline"><input type=radio name="q1" value=true checked> True</label>
+                            <label class="radio-inline"><input type=radio name="q1" value=false> False</label>
+                    </div>
 
-                <!-- <div class="tfQuestions">
-                    <p class="tfQuestionTxt">Question Five...?</p>
-                    <label class="radio-inline"><input id="q5True" type=radio name="question5" value=true> True</label>
-                    <label class="radio-inline"><input id="q5False" type=radio  name="question5" value=false> False</label>
-                </div></br>
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">If I were to watch a cartoon featuring a friendly spider character, I would feel perfectly at ease.</p>
+                        <label class="radio-inline"><input type=radio name="q2" value=true checked> True</label>
+                        <label class="radio-inline"><input type=radio  name="q2" value=false> False</label>
+                    </div>
 
-                <div class="tfQuestions">
-                    <p class="tfQuestionTxt">Question Six...?</p>
-                    <label class="radio-inline"><input id="q6True" type=radio name="question6" value=true> True</label>
-                    <label class="radio-inline"><input id="q6False" type=radio  name="question6" value=false> False</label>
-                </div></br>
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">I feel anxious or uncomfortable looking at a photograph of a spider.</p>
+                        <label class="radio-inline"><input type=radio name="q3" value=true checked> True</label>
+                        <label class="radio-inline"><input type=radio  name="q3" value=false> False</label>
+                    </div>
 
-                <div class="tfQuestions">
-                    <p class="tfQuestionTxt">Question Seven...?</p>
-                    <label class="radio-inline"><input id="q7True" type=radio name="question7" value=true> True</label>
-                    <label class="radio-inline"><input id="q7False" type=radio  name="question7" value=false> False</label>
-                </div></br>
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">Seeing a dead spider does not make me feel fearful or uncomfortable.</p>
+                        <label class="radio-inline"><input type=radio name="q4" value=true checked> True</label>
+                        <label class="radio-inline"><input type=radio  name="q4" value=false> False</label>
+                    </div>
 
-                <div class="tfQuestions">
-                    <p class="tfQuestionTxt">Question Eight...?</p>
-                    <label class="radio-inline"><input id="q8True" type=radio name="question8" value=true> True</label>
-                    <label class="radio-inline"><input id="q8False" type=radio  name="question8" value=false> False</label> </br>
-                </div></br> -->
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">I can watch a non-animated video of a spider in nature without becoming anxious or uncomfortable.</p>
+                        <label class="radio-inline"><input type=radio name="q5" value=true checked> True</label>
+                        <label class="radio-inline"><input type=radio  name="q5" value=false> False</label> </br>
+                    </div>
 
-                    <input id="submitForm" class="buttonStyle" type="submit" value="submit"/>
-            </div>
-        </form>
+                    <div class="tfQuestions">
+                        <p class="tfQuestionTxt">I can touch a photograph or drawing of a spider without becoming anxious or uncomfortable.</p>
+                        <label class="radio-inline"><input type=radio name="q6" value=true checked> True</label>
+                        <label class="radio-inline"><input type=radio  name="q6" value=false> False</label> </br>
+                    </div>
+
+                    <input id="submitForm" class="buttonStyle"  value="submit"/>
+                </div>
+            </form>
 
         <!-- <div id="assessResults">
             <p>text about assessment results</p>
@@ -78,6 +91,7 @@
         </div> -->
 
     </div>
+    <script src="js/util.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>
