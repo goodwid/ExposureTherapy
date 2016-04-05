@@ -20,11 +20,20 @@ var userInfo = {
   previousVisitData: []
 }
 
-var form = document.getElementById('formtest');
+var form = gebi('questionForm');
 var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
-        console.log (form.elements['q1'].value);
+        var userName = form.elements.inputName.value;
+        var phobia = form.elements.phobia.value;
+        var q1Answer = form.elements.q1.value;
+        var q2Answer = form.elements.q2.value;
+        var q3Answer = form.elements.q3.value;
+        var q4Answer = form.elements.q4.value;
+        var q5Answer = form.elements.q5.value;
+        var q6Answer = form.elements.q6.value;
 
+        console.log(userName, phobia, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
     })
+
 }
