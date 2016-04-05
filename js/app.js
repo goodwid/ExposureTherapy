@@ -25,20 +25,25 @@ var form = gebi('questionForm');
 var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
-        var userName = form.elements.inputName.value;
-        if (!userName) {alert('Username is required!  Please fill out your first name.');}
-        var phobia = form.elements.phobia.value;
-        var panicimage = form.elements.panicimage.value;
-        var q1Answer = form.elements.q1.value;
-        var q2Answer = form.elements.q2.value;
-        var q3Answer = form.elements.q3.value;
-        var q4Answer = form.elements.q4.value;
-        var q5Answer = form.elements.q5.value;
-        var q6Answer = form.elements.q6.value;
-        
-
-        console.log(userName, phobia, panicimage, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
-
+        var answers=[]''
+        if (!userName) {
+            alert('Username is required!  Please fill out your first name.');
+        } else {
+            answers.push(form.elements.inputName.value);
+            answers.push(form.elements.phobia.value);
+            answers.push(form.elements.panicimage.value);
+            answers.push(form.elements.q1.value);
+            answers.push(form.elements.q2.value);
+            answers.push(form.elements.q3.value);
+            answers.push(form.elements.q4.value);
+            answers.push(form.elements.q5.value);
+            answers.push(form.elements.q6.value);
+        }
+        console.log(answers);
     })
+
+}
+
+function displayImage(level,index) {
 
 }
