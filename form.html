@@ -5,7 +5,9 @@
         <title>Conquer It!</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
+
     <body>
+    <div id="pageWrap">
         <header>
             <nav>
                 <h1>Conquer It!</h1>
@@ -18,80 +20,108 @@
         </header>
 
         <form>
-            <label for="inputName">What's your first name?</label>
-            <input id="inputName" type=text value="your name" /></br>
+            <div id="formWrapper">
+                <div id="formHeader">
+                    <h3>Let's get you started</h3>
+                    <p>Answering the following questions will help us start you at the level best suited for your needs.</p>
+                </div></br>
 
-            <p class="questionTxt">What phobia will you be addressing?</p>
-            <label for="arach">Arachnophobia</label>
-            <input id="arach" type=radio value="arach">
-            <label for="arach">Other</label>
-            <input id="other" type=radio value="other">
+                <p class=questionTxt>What's your first name?
+                <input id="inputName" type=text size="35"  />
+                </p></br>
 
-            <p class="questionTxt">Question One...?</p>
-            <input id="q1" type=radio name="question1" value="1"> 1
-            <input id="other" type=radio  name="question1" value="2"> 2
-            <input id="other" type=radio name="question1" value="3"> 3
-            <input id="other" type=radio name="question1" value="4"> 4
-            <input id="other" type=radio name="question1" value="5"> 5
-            <input id="other" type=radio name="question1" value="6"> 6
-            <input id="other" type=radio name="question1" value="7"> 7
-            <input id="other" type=radio name="question1" value="8"> 8
-            <input id="other" type=radio name="question1" value="9"> 9
-            <input id="other" type=radio name="question1" value="10"> 10
+                <div id="qPhobiaType">
+                    <p class="questionTxt">What phobia will you be addressing?
+                    <label class="radio-inline"><input id="arach" type=radio value="arach">Arachnophobia</label>
+                    <label class="radio-inline"><input id="other" type=radio value="other">Other</label>
+                    </p>
+                </div>
 
-            <p class="questionTxt">Question Two...?</p>
-            <input id="q1" type=radio name="question2" value="1"> 1
-            <input id="other" type=radio  name="question2" value="2"> 2
-            <input id="other" type=radio name="question2" value="3"> 3
-            <input id="other" type=radio name="question2" value="4"> 4
-            <input id="other" type=radio name="question2" value="5"> 5
-            <input id="other" type=radio name="question2" value="6"> 6
-            <input id="other" type=radio name="question2" value="7"> 7
-            <input id="other" type=radio name="question2" value="8"> 8
-            <input id="other" type=radio name="question2" value="9"> 9
-            <input id="other" type=radio name="question2" value="10"> 10
 
-            <p class="questionTxt">Question Three...?</p>
-            <input id="q1" type=radio name="question3" value="1"> 1
-            <input id="other" type=radio  name="question3" value="2"> 2
-            <input id="other" type=radio name="question3" value="3"> 3
-            <input id="other" type=radio name="question3" value="4"> 4
-            <input id="other" type=radio name="question3" value="5"> 5
-            <input id="other" type=radio name="question3" value="6"> 6
-            <input id="other" type=radio name="question3" value="7"> 7
-            <input id="other" type=radio name="question3" value="8"> 8
-            <input id="other" type=radio name="question3" value="9"> 9
-            <input id="other" type=radio name="question3" value="10"> 10
+                <div class="questions">
+                    </br></br>
+                    <p class="questionTxt">Question One...?
+                    <label class="radio-inline"><input id="q1-1" type=radio name="question" value="1"> 1</label>
+                    <label class="radio-inline"><input id="q1-2" type=radio  name="question" value="2">2</label>
+                    <label class="radio-inline"><input id="q1-3" type=radio name="question" value="3"> 3</label>
+                    <label class="radio-inline"><input id="q1-4" type=radio name="question" value="4"> 4</label>
+                    <label class="radio-inline"><input id="q1-5" type=radio name="question" value="5"> 5</label>
+                    <label class="radio-inline"><input id="q1-6" type=radio name="question" value="6"> 6</label>
+                    <label class="radio-inline"><input id="q1-7" type=radio name="question" value="7"> 7</label>
+                    <label class="radio-inline"><input id="q1-8" type=radio name="question" value="8"> 8</label>
+                    <label class="radio-inline"><input id="q1-9" type=radio name="question" value="9"> 9</label>
+                    <label class="radio-inline"><input id="q1-10" type=radio name="question" value="10">10</label>
+                    </p>
+                </div></br>
 
-            <p class="questionTxt">Question Four...?</p>
-            <input id="q1" type=radio name="question4" value="1"> 1
-            <input id="other" type=radio  name="question4" value="2"> 2
-            <input id="other" type=radio name="question4" value="3"> 3
-            <input id="other" type=radio name="question4" value="4"> 4
-            <input id="other" type=radio name="question4" value="5"> 5
-            <input id="other" type=radio name="question4" value="6"> 6
-            <input id="other" type=radio name="question4" value="7"> 7
-            <input id="other" type=radio name="question4" value="8"> 8
-            <input id="other" type=radio name="question4" value="9"> 9
-            <input id="other" type=radio name="question4" value="10"> 10
+                <div class="questions">
+                    <p class="questionTxt">Question Two...?</p>
+                    <label class="radio-inline"><input id="q2-1" type=radio name="question" value="1">1</label>
+                    <label class="radio-inline"><input id="q2-2" type=radio name="question" value="2"> 2</label>
+                    <label class="radio-inline"><input id="q2-3" type=radio name="question" value="3"> 3</label>
+                    <label class="radio-inline"><input id="q2-4" type=radio name="question" value="4"> 4</label>
+                    <label class="radio-inline"><input id="q2-5" type=radio name="question" value="5"> 5</label>
+                    <label class="radio-inline"><input id="q2-6" type=radio name="question" value="6"> 6</label>
+                    <label class="radio-inline"><input id="q2-7" type=radio name="question" value="7"> 7</label>
+                    <label class="radio-inline"><input id="q2-8" type=radio name="question" value="8"> 8</label>
+                    <label class="radio-inline"><input id="q2-9" type=radio name="question" value="9"> 9</label>
+                    <label class="radio-inline"><input id="q2-10" type=radio name="question" value="10"> 10</label>
+                </div></br>
 
-            <p class="questionTxt">Question Five...?</p>
-            <input id="q1" type=radio name="question5" value=true> True
-            <input id="other" type=radio  name="question5" value=false> False
+                <div class="questions">
+                    <p class="questionTxt">Question Three...?</p>
+                    <label class="radio-inline"><input id="q3-1" type=radio name="question3" value="1"> 1</label>
+                    <label class="radio-inline"><input id="q3-2" type=radio  name="question3" value="2"> 2</label>
+                    <label class="radio-inline"><input id="q3-3" type=radio name="question3" value="3"> 3</label>
+                    <label class="radio-inline"><input id="q3-4" type=radio name="question3" value="4"> 4</label>
+                    <label class="radio-inline"><input id="q3-5" type=radio name="question3" value="5"> 5</label>
+                    <label class="radio-inline"><input id="q3-6" type=radio name="question3" value="6"> 6</label>
+                    <label class="radio-inline"><input id="q3-7" type=radio name="question3" value="7"> 7</label>
+                    <label class="radio-inline"><input id="q3-8" type=radio name="question3" value="8"> 8</label>
+                    <label class="radio-inline"><input id="q3-9" type=radio name="question3" value="9"> 9</label>
+                    <label class="radio-inline"><input id="q3-10" type=radio name="question3" value="10"> 10</label>
+                </div></br>
 
-            <p class="questionTxt">Question Six...?</p>
-            <input id="q1" type=radio name="question6" value=true> True
-            <input id="other" type=radio  name="question6" value=false> False
+                <div class="questions">
+                    <p class="questionTxt">Question Four...?</p>
+                    <label class="radio-inline"><input id="q4-1" type=radio name="question4" value="1"> 1</label>
+                    <label class="radio-inline"><input id="q4-2" type=radio name="question4" value="2"> 2</label>
+                    <label class="radio-inline"><input id="q4-3" type=radio name="question4" value="3"> 3</label>
+                    <label class="radio-inline"><input id="q4-4" type=radio name="question4" value="4"> 4</label>
+                    <label class="radio-inline"><input id="q4-5" type=radio name="question4" value="5"> 5</label>
+                    <label class="radio-inline"><input id="q4-6" type=radio name="question4" value="6"> 6</label>
+                    <label class="radio-inline"><input id="q4-7" type=radio name="question4" value="7"> 7</label>
+                    <label class="radio-inline"><input id="q4-8" type=radio name="question4" value="8"> 8</label>
+                    <label class="radio-inline"><input id="q4-9" type=radio name="question4" value="9"> 9</label>
+                    <label class="radio-inline"><input id="q4-10" type=radio name="question4" value="10"> 10</label>
+                </div></br>
 
-            <p class="questionTxt">Question Seven...?</p>
-            <input id="q1" type=radio name="question7" value=true> True
-            <input id="other" type=radio  name="question7" value=false> False
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">Question Five...?</p>
+                    <label class="radio-inline"><input id="q5True" type=radio name="question5" value=true> True</label>
+                    <label class="radio-inline"><input id="q5False" type=radio  name="question5" value=false> False</label>
+                </div></br>
 
-            <p class="questionTxt">Question Eight...?</p>
-            <input id="q1" type=radio name="question8" value=true> True
-            <input id="other" type=radio  name="question8" value=false> False </br>
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">Question Six...?</p>
+                    <label class="radio-inline"><input id="q6True" type=radio name="question6" value=true> True</label>
+                    <label class="radio-inline"><input id="q6False" type=radio  name="question6" value=false> False</label>
+                </div></br>
 
-            <input class="buttonStyle" type="submit" value="submit"/>
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">Question Seven...?</p>
+                    <label class="radio-inline"><input id="q7True" type=radio name="question7" value=true> True</label>
+                    <label class="radio-inline"><input id="q7False" type=radio  name="question7" value=false> False</label>
+                </div></br>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">Question Eight...?</p>
+                    <label class="radio-inline"><input id="q8True" type=radio name="question8" value=true> True</label>
+                    <label class="radio-inline"><input id="q8False" type=radio  name="question8" value=false> False</label> </br>
+                </div></br>
+
+                    <input id="submitForm" class="buttonStyle" type="submit" value="submit"/>
+            </div>
         </form>
 
         <div id="assessResults">
@@ -99,6 +129,7 @@
             <input class="buttonStyle" type="submit" value="submit"/>
         </div>
 
-        <script src="js/app.js"></script>
+    </div>
+    <script src="js/app.js"></script>
     </body>
 </html>
