@@ -10,12 +10,12 @@ localStorage should store:
 */
 
 //OBJECT THAT WILL BE STORED IN LOCALSTORAGE AND WILL TRACK USER DETAILS/PROGRESS
-var userInfo {
-  evalComplete: false;
-  userName: '';
-  panicImage: '';
-  recommendedStartImage: '';
-  exercisesBegun: false;
-  lastViewedImage: '';
-  previousVisitData: [];
+var userInfo = {
+  evalComplete: false,
+  userName: '',
+  panicImage: '',
+  recommendedStartImage: '',
+  exercisesBegun: false,
+  lastViewedImage: '',
+  previousVisitData: []
 }
