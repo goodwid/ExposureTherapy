@@ -20,6 +20,7 @@
         </header>
 
         <section>
+
             <h2 id="welcomeMsg">Welcome!</h2>  <!--To be populated with JS using UserName-->
             <p>
                 There are eleven levels of exposure, each of which contains three images.
@@ -39,19 +40,27 @@
         </section>
 
         <section>
-              <img src="images/placeholder.jpg" />
-              <div class="exerciseNavButtons">
-                <img src= "images\helpIcon.png" />
-                <input id="lastLevelButton" type="submit" name="navButtons" value="Last Level" />
-                <input id="simImagesButton" type = "submit" name="navButtons" value = "Next Level" />
-                <input id="nextLevelButton" type = "submit" name ="navButtons" value ="Similar Images" />
-                <img src= "images\panicIcon.png" />
-              </div>
+            <div id="popup">
+                <img id="mainImage" src="images/placeholder.jpg" />
+                  <div class="exerciseNavButtons">
+                    <img src= "images\helpIcon.png" />
+                    <input id="lastLevelButton" type="submit" name="navButtons" value="Last Level" />
+                    <input id="simImagesButton" type = "submit" name="navButtons" value = "Next Level" />
+                    <input id="nextLevelButton" type = "submit" name ="navButtons" value ="Similar Images" />
+                    <img src= "images\panicIcon.png" />
+                  </div>
 
-              <p id="locationCallout">here's what level you're on</p>
+                <h1>POPUP HEADER</h1>
+                <P>popup message goes here</P>
+                <input id="okButton" type = "submit" name ="okButton" value ="OK" />
+            </div>
+                <p id="locationCallout">here's what level you're on</p>
         </section>
 
-        <script src="js/app.js"></script>
+
         <script src="js/constructor.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/exerciseControls.js"></script>
     </body>
 </html>
