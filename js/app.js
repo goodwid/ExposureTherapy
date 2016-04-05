@@ -25,7 +25,7 @@ var form = gebi('questionForm');
 var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
-        var answers=[]''
+        var answers=[];
         if (!userName) {
             alert('Username is required!  Please fill out your first name.');
         } else {
@@ -45,5 +45,7 @@ if (formButton) {
 }
 
 function displayImage(level,index) {
-
+    var imageEl = gebi('mainImage');
+    var imagePath = imageArray[level,index].path;
+    imageEl.setAttribute('src',imagePath);
 }
