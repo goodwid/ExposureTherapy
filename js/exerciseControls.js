@@ -7,6 +7,8 @@ var lastLevel = gebi("lastLevelButton");
 var popup     = gebi("popup");
 
 
+displayImage(1,0);
+
 
 //functionality of next level button--shows pop up if user aleady at last level.
 function goNextLevel (currLevel) {
