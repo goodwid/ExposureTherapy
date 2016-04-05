@@ -19,7 +19,6 @@
             </nav>
         </header>
 
-        <form>
             <div id="formWrapper">
                 <!-- <div id="formHeader">
                     <h3>Let's get you started</h3>
@@ -39,8 +38,10 @@
 
                 <div class="tfQuestions">
                     <p class="tfQuestionTxt">Question Six...?</p>
-                    <label class="radio-inline"><input id="q1True" type=radio name="question6" value=true> True</label>
-                    <label class="radio-inline"><input id="q1False" type=radio  name="question6" value=false> False</label>
+                    <form id="formtest"
+                        <label class="radio-inline"><input id="q1True"  type=radio name="q1" value=true> True</label>
+                        <label class="radio-inline"><input id="q1False" type=radio name="q1" value=false> False</label>
+                    </form>
                 </div></br>
 
 
@@ -68,9 +69,8 @@
                     <label class="radio-inline"><input id="q8False" type=radio  name="question8" value=false> False</label> </br>
                 </div></br> -->
 
-                    <input id="submitForm" class="buttonStyle" type="submit" value="submit"/>
+                    <input id="submitForm" class="buttonStyle"  value="submit"/>
             </div>
-        </form>
 
         <!-- <div id="assessResults">
             <p>text about assessment results</p>
@@ -78,6 +78,7 @@
         </div> -->
 
     </div>
+    <script src="js/util.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>

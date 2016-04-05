@@ -20,9 +20,11 @@ var userInfo = {
   previousVisitData: []
 }
 
+var form = document.getElementById('formtest');
 var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
-        var q1A = gebi('question1');
+        console.log (form.elements['q1'].value);
+
     })
 }
