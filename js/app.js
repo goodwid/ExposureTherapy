@@ -26,10 +26,12 @@ var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
         var answers=[];
+        var temp = []
+        var userName = form.elements.inputName.value;
         if (!userName) {
             alert('Username is required!  Please fill out your first name.');
         } else {
-            answers.push(form.elements.inputName.value);
+            answers.push(userName)
             answers.push(form.elements.phobia.value);
             answers.push(form.elements.panicimage.value);
             answers.push(form.elements.q1.value);
@@ -46,6 +48,14 @@ if (formButton) {
 
 function displayImage(level,index) {
     var imageEl = gebi('mainImage');
-    var imagePath = imageArray[level,index].path;
+    var imagePath = imageArray[level][index].path;
     imageEl.setAttribute('src',imagePath);
+}
+
+function updateUserInfo() {
+    localStorage.userInfo = JSON.stringify(userInfo);
+}
+
+function getUserInfo() {
+    return JSON.parse(localStorage.userInfo);
 }
