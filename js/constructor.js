@@ -47,3 +47,18 @@ var image10c = new Image('10c.png');
 var image11a = new Image('11a.png');
 var image11b = new Image('11b.png');
 var image11c = new Image('11c.png');
+
+//Array of images
+var imageArray = [
+    [image1a, image1b, image1c],
+    [image2a, image2b, image2c],
+    [image3a, image3b, image3c],
+    [image4a, image4b, image4c],
+    [image5a, image5b, image5c],
+    [image6a, image6b, image6c],
+    [image7a, image7b, image7c],
+    [image8a, image8b, image8c],
+    [image9a, image9b, image9c],
+    [image10a, image10b, image10c],
+    [image11a, image11b, image11c]
+];
