@@ -118,6 +118,22 @@ ul {
 
 li {
 }
+#mainImage{
+    
+
+}
+
+#popup{
+    width:  50%;
+    height: 50%;
+    margin-left: 100px;
+    top: 100px;
+    border: 1px;
+    float: left;
+    position: absolute;
+
+
+}
 
 form{
  width:590px;
