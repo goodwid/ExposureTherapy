@@ -10,6 +10,10 @@ body {
     padding-top: 100px;
 }
 
+#pageWrap{
+
+}
+
 header {
     background-color: #8ecea5;
     color: #FFFFFF;
@@ -107,8 +111,34 @@ ul {
 }
 
 li {
-
 }
+
+form{
+ border: 4px black;
+ width: 50%;
+ margin-left: 300px;
+ position: fixed;
+ display: inline-block;
+ top: 200px;
+ background-color: white;
+ padding: 120px 25px 25px 25px;
+ box-shadow: 5px 5px 10px #898989;
+ line-height: 28px;
+ font-family:"Poiret One";
+}
+.questions p{
+    display: inline;
+    padding-right: 25px;
+}
+
+label{
+    
+}
+
+
+
+
+
 
 /** {
     border: 1px dashed red;

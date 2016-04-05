@@ -2,10 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"></meta>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Conquer It!</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
     </head>
     <body>
+    <div id="pageWrap">
         <header>
             <nav>
                 <h1>Conquer It!</h1>
@@ -17,7 +23,7 @@
             </nav>
         </header>
 
-        <form>
+        <form >
             <label for="inputName">What's your first name?</label>
             <input id="inputName" type=text value="your name" /></br>
 
@@ -27,71 +33,88 @@
             <label for="arach">Other</label>
             <input id="other" type=radio value="other">
 
-            <p class="questionTxt">Question One...?</p>
-            <input id="q1" type=radio name="question1" value="1"> 1
-            <input id="other" type=radio  name="question1" value="2"> 2
-            <input id="other" type=radio name="question1" value="3"> 3
-            <input id="other" type=radio name="question1" value="4"> 4
-            <input id="other" type=radio name="question1" value="5"> 5
-            <input id="other" type=radio name="question1" value="6"> 6
-            <input id="other" type=radio name="question1" value="7"> 7
-            <input id="other" type=radio name="question1" value="8"> 8
-            <input id="other" type=radio name="question1" value="9"> 9
-            <input id="other" type=radio name="question1" value="10"> 10
+            <div class="questions">
+                <p class="questionTxt">Question One...?</p>
+                <label class="radio-inline"><input id="q1-1" type=radio name="question" value="1">1</label>
+                <label class="radio-inline"><input id="q1-2" type=radio  name="question" value="2"> 2</label>
+                <label class="radio-inline"><input id="q1-3" type=radio name="question" value="3"> 3</label>
+                <label class="radio-inline"><input id="q1-4" type=radio name="question" value="4"> 4</label>
+                <label class="radio-inline"><input id="q1-5" type=radio name="question" value="5"> 5</label>
+                <label class="radio-inline"><input id="q1-6" type=radio name="question" value="6"> 6</label>
+                <label class="radio-inline"><input id="q1-7" type=radio name="question" value="7"> 7</label>
+                <label class="radio-inline"><input id="q1-8" type=radio name="question" value="8"> 8</label>
+                <label class="radio-inline"><input id="q1-9" type=radio name="question" value="9"> 9</label>
+                <label class="radio-inline"><input id="q1-10" type=radio name="question" value="10"> 10</label>
+            </div>
 
-            <p class="questionTxt">Question Two...?</p>
-            <input id="q1" type=radio name="question2" value="1"> 1
-            <input id="other" type=radio  name="question2" value="2"> 2
-            <input id="other" type=radio name="question2" value="3"> 3
-            <input id="other" type=radio name="question2" value="4"> 4
-            <input id="other" type=radio name="question2" value="5"> 5
-            <input id="other" type=radio name="question2" value="6"> 6
-            <input id="other" type=radio name="question2" value="7"> 7
-            <input id="other" type=radio name="question2" value="8"> 8
-            <input id="other" type=radio name="question2" value="9"> 9
-            <input id="other" type=radio name="question2" value="10"> 10
+            <div class="questions">
+                <p class="questionTxt">Question Two...?</p>
+                <input id="q2-1" type=radio name="question" value="1">
+                <label for="q2-1">1</label>
+                <input id="q2-2" type=radio name="question" value="2"> 2
+                <input id="q2-3" type=radio name="question" value="3"> 3
+                <input id="q2-4" type=radio name="question" value="4"> 4
+                <input id="q2-5" type=radio name="question" value="5"> 5
+                <input id="q2-6" type=radio name="question" value="6"> 6
+                <input id="q2-7" type=radio name="question" value="7"> 7
+                <input id="q2-8" type=radio name="question" value="8"> 8
+                <input id="q2-9" type=radio name="question" value="9"> 9
+                <input id="q2-10" type=radio name="question" value="10"> 10
+            </div>
 
-            <p class="questionTxt">Question Three...?</p>
-            <input id="q1" type=radio name="question3" value="1"> 1
-            <input id="other" type=radio  name="question3" value="2"> 2
-            <input id="other" type=radio name="question3" value="3"> 3
-            <input id="other" type=radio name="question3" value="4"> 4
-            <input id="other" type=radio name="question3" value="5"> 5
-            <input id="other" type=radio name="question3" value="6"> 6
-            <input id="other" type=radio name="question3" value="7"> 7
-            <input id="other" type=radio name="question3" value="8"> 8
-            <input id="other" type=radio name="question3" value="9"> 9
-            <input id="other" type=radio name="question3" value="10"> 10
+            <div class="questions">
+                <p class="questionTxt">Question Three...?</p>
+                <input id="q1" type=radio name="question3" value="1"> 1
+                <input id="other" type=radio  name="question3" value="2"> 2
+                <input id="other" type=radio name="question3" value="3"> 3
+                <input id="other" type=radio name="question3" value="4"> 4
+                <input id="other" type=radio name="question3" value="5"> 5
+                <input id="other" type=radio name="question3" value="6"> 6
+                <input id="other" type=radio name="question3" value="7"> 7
+                <input id="other" type=radio name="question3" value="8"> 8
+                <input id="other" type=radio name="question3" value="9"> 9
+                <input id="other" type=radio name="question3" value="10"> 10
+            </div>
 
-            <p class="questionTxt">Question Four...?</p>
-            <input id="q1" type=radio name="question4" value="1"> 1
-            <input id="other" type=radio  name="question4" value="2"> 2
-            <input id="other" type=radio name="question4" value="3"> 3
-            <input id="other" type=radio name="question4" value="4"> 4
-            <input id="other" type=radio name="question4" value="5"> 5
-            <input id="other" type=radio name="question4" value="6"> 6
-            <input id="other" type=radio name="question4" value="7"> 7
-            <input id="other" type=radio name="question4" value="8"> 8
-            <input id="other" type=radio name="question4" value="9"> 9
-            <input id="other" type=radio name="question4" value="10"> 10
+            <div class="questions">
+                <p class="questionTxt">Question Four...?</p>
+                <input id="q1" type=radio name="question4" value="1"> 1
+                <input id="other" type=radio  name="question4" value="2"> 2
+                <input id="other" type=radio name="question4" value="3"> 3
+                <input id="other" type=radio name="question4" value="4"> 4
+                <input id="other" type=radio name="question4" value="5"> 5
+                <input id="other" type=radio name="question4" value="6"> 6
+                <input id="other" type=radio name="question4" value="7"> 7
+                <input id="other" type=radio name="question4" value="8"> 8
+                <input id="other" type=radio name="question4" value="9"> 9
+                <input id="other" type=radio name="question4" value="10"> 10
+            </div>
 
-            <p class="questionTxt">Question Five...?</p>
-            <input id="q1" type=radio name="question5" value=true> True
-            <input id="other" type=radio  name="question5" value=false> False
+            <div class="questions">
+                <p class="questionTxt">Question Five...?</p>
+                <input id="q1" type=radio name="question5" value=true> True
+                <input id="other" type=radio  name="question5" value=false> False
+            </div>
 
-            <p class="questionTxt">Question Six...?</p>
-            <input id="q1" type=radio name="question6" value=true> True
-            <input id="other" type=radio  name="question6" value=false> False
+            <div class="questions">
+                <p class="questionTxt">Question Six...?</p>
+                <input id="q1" type=radio name="question6" value=true> True
+                <input id="other" type=radio  name="question6" value=false> False
+            </div>
 
-            <p class="questionTxt">Question Seven...?</p>
-            <input id="q1" type=radio name="question7" value=true> True
-            <input id="other" type=radio  name="question7" value=false> False
+            <div class="questions">
+                <p class="questionTxt">Question Seven...?</p>
+                <input id="q1" type=radio name="question7" value=true> True
+                <input id="other" type=radio  name="question7" value=false> False
+            </div>
 
-            <p class="questionTxt">Question Eight...?</p>
-            <input id="q1" type=radio name="question8" value=true> True
-            <input id="other" type=radio  name="question8" value=false> False </br>
+            <div class="questions">
+                <p class="questionTxt">Question Eight...?</p>
+                <input id="q1" type=radio name="question8" value=true> True
+                <input id="other" type=radio  name="question8" value=false> False </br>
+            </div>
 
-            <input class="buttonStyle" type="submit" value="submit"/>
+                <input class="buttonStyle" type="submit" value="submit"/>
         </form>
 
         <div id="assessResults">
@@ -99,6 +122,8 @@
             <input class="buttonStyle" type="submit" value="submit"/>
         </div>
 
-        <script src="js/app.js"></script>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
 </html>
