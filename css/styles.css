@@ -11,7 +11,7 @@ body {
 }
 
 #pageWrap{
-
+    background-color:  #F0EEDD;
 }
 
 header {
@@ -114,28 +114,59 @@ li {
 }
 
 form{
- border: 4px black;
- width: 50%;
+ width:590px;
  margin-left: 300px;
  position: fixed;
- display: inline-block;
  top: 200px;
- background-color: white;
- padding: 120px 25px 25px 25px;
+ background-color: #8ecea5;
+ padding: 20px;
  box-shadow: 5px 5px 10px #898989;
- line-height: 28px;
- font-family:"Poiret One";
-}
-.questions p{
-    display: inline;
-    padding-right: 25px;
+ line-height: 24px;
+ border-radius: 15px;
 }
 
-label{
-    
+#formWrapper{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
 }
 
+#inputName{  font-size: 100%;
+  background-color: #f2f2f2;
+  display:inline-block;
+  height: 36px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  display:inline-block;
+  float: right;
+  margin-right:20px;
+}
 
+#questionTxt{
+}
+
+#qPhobiaType p{
+    display: inline-block;
+    padding-right: 15px;
+}
+.tfQuestions p{
+    display:inline-block;;
+    padding-right: 35px;
+}
+
+#formHeader{
+    text-align: center;
+    margin: -20px -20px 0px -20px;
+    padding: 45px 15px 10px 15px;
+    color:gray;
+    }
+
+#qPhobiaType{
+    display: inline-block;
+}
+#submitForm{
+
+}
 
 
 
