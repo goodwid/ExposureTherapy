@@ -14,9 +14,10 @@ var userInfo = {
   evalComplete: false,
   userName: '',
   panicImage: '',
-  recommendedStartImage: '',
+  recommendedStartLevel: 1,
   exercisesBegun: false,
-  lastViewedImage: '',
+  lastLevelIndex: 1,
+  lastImageIndex: 0,
   previousVisitData: []
 }
 
@@ -25,6 +26,7 @@ var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
         var userName = form.elements.inputName.value;
+        if (!userName) {alert('Username is required!  Please fill out your first name.');}
         var phobia = form.elements.phobia.value;
         var q1Answer = form.elements.q1.value;
         var q2Answer = form.elements.q2.value;
@@ -34,6 +36,7 @@ if (formButton) {
         var q6Answer = form.elements.q6.value;
 
         console.log(userName, phobia, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
+
     })
 
 }
