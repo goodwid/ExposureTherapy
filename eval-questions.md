@@ -18,12 +18,12 @@ Recommendations in parentheses are not final. Just rough ideas.
 
 * I feel anxious or uncomfortable seeing the word "spider" or hearing someone say the word "spider." (If true, start at Level 1)
 
-* If I were to watch a cartoon featuring a friendly spider character, I would feel perfectly at ease. (If true, start at Level 6; if false start at 2.)
+* If I were to watch a cartoon featuring a friendly spider character, I would feel anxious or uncomfortable. (If true, start at Level 2; if false start at 6.)
 
 * I feel anxious or uncomfortable looking at a photograph of a spider. (If true, start at Level 3.)
 
-* Seeing a dead spider does not make me feel fearful or uncomfortable. (If true, start at Level 6 or 7.)
+* Seeing a dead spider makes me feel fearful or uncomfortable. (If true, start at Level 4 or 5.)
 
-* I can watch a non-animated video of a spider in nature without becoming anxious or uncomfortable. (If true, start at level 10.)
+* I cannot watch a non-animated video of a spider in nature without becoming anxious or uncomfortable. (If false, start at level 10.)
 
-* I can touch a photograph or drawing of a spider without becoming anxious or uncomfortable. (If true, start at Level 8.)
+* I cannot touch a photograph or drawing of a spider without becoming anxious or uncomfortable. (If false, start at Level 8.)
