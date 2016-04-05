@@ -1,4 +1,4 @@
-function Image(fileName) = {
+function Image(fileName) {
     this.path = '../images/' + fileName;
 }
 
