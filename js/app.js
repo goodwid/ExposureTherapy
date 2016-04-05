@@ -18,7 +18,8 @@ var userInfo = {
   lastLevelIndex: 1,
   lastImageIndex: 0,
   panicImageIndex: 0,
-  previousVisitData: []
+  previousVisitLevels: [],
+  previousVisitAnxiety: []
 }
 
 var form = gebi('questionForm');
@@ -26,7 +27,6 @@ var formButton = gebi('submitForm');
 if (formButton) {
     formButton.addEventListener('click', function () {
         var answers=[];
-        var temp = []
         var userName = form.elements.inputName.value;
         if (!userName) {
             alert('Username is required!  Please fill out your first name.');
@@ -41,7 +41,8 @@ if (formButton) {
             answers.push(form.elements.q5.value);
             answers.push(form.elements.q6.value);
         }
-        console.log(answers);
+        panicImageIndex = parseInt(form.elements.panicimage.value);
+        visits = userInfo.previousVisitData.length;
     })
 
 }
