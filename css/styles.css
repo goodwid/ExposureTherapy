@@ -171,7 +171,28 @@ form{
     display: inline-block;
 }
 #submitForm{
+}
+#dogs{
+    display: flex;
+    justify-content: space-between;
+    width: 225px;
+}
 
+.dogs{
+    box-shadow: 4px 4px 8px #898989;
+}
+
+#easyDog{
+    height: 180px;
+}
+
+#medDog{
+    margin-left: 30px;
+    height: 180px;
+}
+#photoDog{
+    margin-left: 30px;
+    height: 180px;
 }
 
 

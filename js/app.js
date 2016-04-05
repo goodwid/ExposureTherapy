@@ -19,3 +19,10 @@ var userInfo = {
   lastViewedImage: '',
   previousVisitData: []
 }
+
+var formButton = gebi('submitForm');
+if (formButton) {
+    formButton.addEventListener('click', function () {
+        var q1A = gebi('question1');
+    })
+}
