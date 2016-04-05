@@ -13,11 +13,11 @@ localStorage should store:
 var userInfo = {
   evalComplete: false,
   userName: '',
-  panicImage: '',
   recommendedStartLevel: 1,
   exercisesBegun: false,
   lastLevelIndex: 1,
   lastImageIndex: 0,
+  panicImageIndex: 0,
   previousVisitData: []
 }
 
@@ -28,6 +28,7 @@ if (formButton) {
         var userName = form.elements.inputName.value;
         if (!userName) {alert('Username is required!  Please fill out your first name.');}
         var phobia = form.elements.phobia.value;
+        var panicimage = form.elements.panicimage.value;
         var q1Answer = form.elements.q1.value;
         var q2Answer = form.elements.q2.value;
         var q3Answer = form.elements.q3.value;
@@ -35,7 +36,7 @@ if (formButton) {
         var q5Answer = form.elements.q5.value;
         var q6Answer = form.elements.q6.value;
 
-        console.log(userName, phobia, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
+        console.log(userName, phobia, panicimage, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
 
     })
 
