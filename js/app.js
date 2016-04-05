@@ -35,6 +35,7 @@ if (formButton) {
         var q4Answer = form.elements.q4.value;
         var q5Answer = form.elements.q5.value;
         var q6Answer = form.elements.q6.value;
+        
 
         console.log(userName, phobia, panicimage, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer);
 
