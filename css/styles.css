@@ -40,6 +40,7 @@ ul {
 nav ul {
     display: flex;
     flex-direction: row;
+    width: 620px;
 }
 
 nav ul li {
@@ -50,6 +51,11 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 130px;
+}
+
+#homeNav {
+    width: 75px;
 }
 
 a {
