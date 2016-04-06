@@ -26,7 +26,21 @@
             </p>
 
             <canvas id=achieveChart></canvas>
-
+            <form id="popupBox">
+               <fieldset>
+                   <legend>Anxiety Index Questionnaire</legend>
+                   <p id="popupMsg">
+                       Welcome back, <span class="userName"></span>. To update your progress page, let's first reevaluate your anxiety level around spiders.
+                   </p>
+                   <p>
+                       These five questions will probably look familiar to you. Recall that your task is to rate your anxiety/discomfort level for the five hypothetical situations. 1 corresponds to "perfectly at ease" and 10 corresponds to the most intense anxiety/discomfort you could feel.
+                   </p>
+                   <p>
+                       How anxious or uncomfortable would you feel...
+                   </p>
+                   <input class="buttonStyle" id="okButton" type = "submit" name ="navButtons" value ="OK" />
+               </fieldset>
+           </form>
         </section>
 
         <script src="js/app.js"></script>
