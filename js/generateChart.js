@@ -1,5 +1,5 @@
 /*
-Assuming userInfo object's previousVisitData will be replaced by:
+Assuming userInfo object's previousVisitData property will be replaced by:
 previousVisitLevels
 previousVisitEvalResults
 */
@@ -8,7 +8,7 @@ previousVisitEvalResults
 //visitLevels: [2, 4, 7, 8];
 //visitEvalResults: [6, 5, 5, 4];
 
-function generateChartData(visitInfo) {     //where parameter visitInfo is either visitLevels or visitEvalResults
+function generateChartData(visitInfo) {     //where visitInfo parameter is either visitLevels or visitEvalResults
     var chartData = {};
     chartData.visits = [];
     for (var aa=1; aa<=userInfo[visitInfo].length; aa++) {
@@ -24,4 +24,27 @@ function generateChartData(visitInfo) {     //where parameter visitInfo is eithe
         chartData.dataPoints = userInfo.visitEvalResults;
     }
     return chartData;
+}
+
+function showChart(data, containerId) {     //where data parameter is the result of generateChartData()
+    var container = document.getElementById(containerId);
+    container.highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: data.chartTitle
+        },
+        xAxis: {
+            categories: data.visits
+        },
+        yAxis: {
+            title: {
+                text: data.axisTitle
+            }
+        },
+        series: [{
+            data: data.dataPoints
+        }]
+    });
 }
