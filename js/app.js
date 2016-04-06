@@ -37,7 +37,7 @@ function processProgressForm() {
         }
     }
     userInfo.previousVisitAnxiety.push(anxietyIndex);
-    storeUserInfo();
+    updateUserInfo();
 }
 
 function displayImage(level,index) {
@@ -87,11 +87,14 @@ if (evalformButton) {
                 if (evalform.elements.q3.value === 'true') { userInfo.lastLevelIndex = 5;}
                 if (evalform.elements.q2.value === 'true') { userInfo.lastLevelIndex = 2;}
                 if (evalform.elements.q1.value === 'true') { userInfo.lastLevelIndex = 1;}
+
+                userInfo.previousVisitLevels.push (userInfo.lastLevelIndex);
                 storeUserInfo();
             }
         }
     })
 }
+
 
 //populate all spans with class 'userName' with (capitalized) user name
 for (var bb=0; bb<spanEls.length; bb++) {
