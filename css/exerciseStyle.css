@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+body{
+    font-family: "Comfortaa";
+    background-image: url("../images/kimImgs/wild_flowers.png");
+    background-repeat: repeat;
+    height=100%;
+}
+
+#headExercises{
+    width: 100%;
+    position: fixed;
+}
+
+#logo{
+    width: 156px;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    left: 230px;
+    top: 16px;
+}
+#logoTxt{
+    width: 207px;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    left: 210px;
+    top: 125px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+nav ul{
+    display: flex;
+    width: 40%;
+    justify-content:space-between;
+    list-style-type: none;
+    font-family: "Century Gothic";
+    margin-top: 10px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+li a:hover{
+    background-color: #b2f9ed;
+    padding: 10px;
+    color: #725e5e;
+}
+
+#HeaderWrapper{
+    width: 80%;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+    background-color: #877676;
+}
+
+#menuBorder{
+    background-color: #725e5e;
+    height: 45px;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+#exercisePage{
+    background-color: #dbdad7;
+    position: relative;
+    width: 80%;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -45px;
+    top: 165px;
+}
+
+#mainImage{
+    width: 550px;
+    height: 380px;
+    background-color: white;
+    box-shadow: 5px 5px 10px #898989;
+    margin: 0 auto;
+    display: block;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#location{
+    width: 20%;
+    position: absolute;
+    top: 250px;
+}
+#helpText{
+    visibility: hidden;
+}
+
+.location{
+    font-size: 72px;
+    font-weight: bolder;;
+    text-shadow: 2px 2px 2px #725e5e;
+    color: #dbdad7;
+    text-align: center;
+}
+.locationSub{
+    text-align: center;
+    color: #725e5e;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 0px;
+}
+.exerciseNavButtons{
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    top: 15px;
+    width: 500px;
+    margin: 0 auto;
+    align-items: center;
+}
+#help{
+    width:23px;
+    height:23px;
+}
+
+input[name=navButtons]{
+    background-color: #327c7a;
+    padding: 6px;
+    width: 110px;
+    color: white;
+}
+input[name=navButtons]:hover{
+    background-color: #b2f9ed;
+    color: #725e5e;
+}
+form{
+    padding: 20px;
+    display: none;
+    height: 500px;
+    width: 40%;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    background-color: #877676;
+    border-radius: 10px;
+    left: 280px;
+    box-shadow: 5px 5px 5px #898989;
+}
+fieldset{
+    background-color: white;
+    height: 450px;
+    border-radius: 10px;
+}
+legend{
+    height: 100px;
+    color: white;
+    font-size: 40px;
+}
+#okButton{
+    margin-top: 250px;
+}
+#exercisePage:after{
+    content:"";
+    display: block;
+    height: 105px;
+}
+footer{
+    background-color: #725e5e;
+    height: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    display: block;
+    z-index: 5;
+    top:200px;
+}
