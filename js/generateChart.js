@@ -15,8 +15,13 @@ function generateChartData(visitInfo) {     //where parameter visitInfo is eithe
         charttData.visits.push('Visit ' + aa);
     }
     if (visitInfo = visitLevels) {
-        chartData.axisTitle = 'Max Level Reached';
+        chartData.chartTitle = 'Highest Level Reached By Visit'
+        chartData.axisTitle = 'Highest Level Reached'; //Not sure if this will be x-axis or y-axis, but it is the non-"Visit" axis
+        chartData.dataPoints = userInfo.visitLevels;
     } else {
+        chartData.chartTitle = 'Phobic Index By Visit'
         chartData.axisTitle = 'Phobic Index';
+        chartData.dataPoints = userInfo.visitEvalResults;
     }
+    return chartData;
 }
