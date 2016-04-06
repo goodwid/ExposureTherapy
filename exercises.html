@@ -24,36 +24,18 @@
         <div id="menuBorder"></div>
         </div>
 
-
-
         <section id="exercisePage">
         <div id="sectionWrapper">
             <div id="helpText">
-                <h2 id="welcomeMsg">Welcome!</h2>  <!--To be populated with JS using UserName-->
-                <p>
-                    There are eleven levels of exposure, each of which contains three images.
-                </p>
-                <p>
-                    Clicking the "Similar Images" button will allow you to move from one image to the next within the level you're currently in. We recommend you spend some time with all three images at each level.
-                </p>
-                <p>
-                    Once you can view all three without feeling distressed, use the "Next Level" button to advance to the next set of three images.
-                </p>
-                <p>
-                    If your anxiety or fear reaches a level you are not comfortable with, use the "Last Level" button to return to the previous level or the panic button to instantly view the calming image you selected when you began the program.
-                </p>
-                <p>
-                    Spend as much time as you need to with each image. This will be a gradual process for most, so take however much time you need to progress from level to level.
-                </p>
             </div>
             <div id="popup">
 
                 <img id="mainImage" src="images/placeholder.jpg" />
 
                 <div id="location">
-                    <p class="location">3</p>
+                    <p class="location" id="levelIndicator">3</p>
                     <p class="locationSub">level</p></br></br>
-                    <p class="location">3</p>
+                    <p class="location" id="imageIndicator">3</p>
                     <p class="locationSub">image</p>
                 </div>
 
@@ -64,10 +46,10 @@
                     <input id="nextLevelButton" type = "submit" name ="navButtons" value ="Next Level" />
                     <img src= "images/kimImgs/panicIcon.png" />
                   </div>
-                 <form id="navPopup">
+                 <form id="popupBox">
                     <fieldset>
                         <legend>POPUP HEADER</legend>
-                        <P id="popupMsg">popup message goes here</P>
+                        <p id="popupMsg">popup message goes here</p>
                         <input class="buttonStyle" id="okButton" type = "submit" name ="navButtons" value ="OK" />
                     </fieldset>
                 </form>
