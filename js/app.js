@@ -37,7 +37,7 @@ function processProgressForm() {
         }
     }
     userInfo.previousVisitAnxiety.push(anxietyIndex);
-    updateUserInfo();
+    storeUserInfo();
 }
 
 function displayImage(level,index) {
