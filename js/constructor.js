@@ -4,9 +4,9 @@ function Image(fileName) {
 }
 
 //Build all image objects
-var panicImage1 = new Image('');
-var panicImage2 = new Image('');
-var panicImage3 = new Image('');
+var panicImage1 = new Image('panic/puppies.jpg');
+var panicImage2 = new Image('panic/kittens.jpg');
+var panicImage3 = new Image('panic/landscape.jpg');
 
 var image1a = new Image('spiders/1a.png');
 var image1b = new Image('spiders/1b.png');
@@ -54,6 +54,7 @@ var image11c = new Image('spiders/11c.png');
 
 //Array of images
 var imageArray = [
+    [panicImage1, panicImage2, panicImage3],
     [image1a, image1b, image1c],
     [image2a, image2b, image2c],
     [image3a, image3b, image3c],
