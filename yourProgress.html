@@ -4,6 +4,11 @@
         <meta charset="utf-8"></meta>
         <title>Your Progress</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script>
+        if (!localStorage.userInfo) {
+            location.href='exercises.html';
+        }
+        </script>
     </head>
     <body>
         <div id="headExercises">
@@ -121,6 +126,7 @@
                </fieldset>
            </form>  <!--#progressForm-->
        </section>  <!--#popupBox-->
+
 
         <script src="js/util.js"></script>
         <script src="js/app.js"></script>
