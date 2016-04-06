@@ -6,7 +6,6 @@ localStorage should store:
 4. whether user has begun exercises
 5. image viewed when user last left page
 6. previous visit dates and respective "level reached" numbers (for chart)
-
 */
 
 //OBJECT THAT WILL BE STORED IN LOCALSTORAGE AND WILL TRACK USER DETAILS/PROGRESS
@@ -28,12 +27,13 @@ if (formButton) {
     formButton.addEventListener('click', function () {
         var answers=[];
         var userName = form.elements.inputName.value;
+        var panicImageIndex = parseInt(form.elements.panicimage.value);
         if (!userName) {
             alert('Username is required!  Please fill out your first name.');
         } else {
             answers.push(userName)
             answers.push(form.elements.phobia.value);
-            answers.push(form.elements.panicimage.value);
+            answers.push(panicImageIndex);
             answers.push(form.elements.q1.value);
             answers.push(form.elements.q2.value);
             answers.push(form.elements.q3.value);
@@ -41,10 +41,8 @@ if (formButton) {
             answers.push(form.elements.q5.value);
             answers.push(form.elements.q6.value);
         }
-        panicImageIndex = parseInt(form.elements.panicimage.value);
-        visits = userInfo.previousVisitData.length;
+        var visits = userInfo.previousVisitLevels.length;
     })
-
 }
 
 function displayImage(level,index) {
