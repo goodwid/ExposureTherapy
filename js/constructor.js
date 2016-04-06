@@ -1,6 +1,6 @@
 //Image object constructor
 function Image(fileName) {
-    this.path = '../images/' + fileName;
+    this.path = 'images/' + fileName;
 }
 
 //Build all image objects

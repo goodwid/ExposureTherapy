@@ -21,6 +21,29 @@ var userInfo = {
   previousVisitAnxiety: []
 }
 
+function processProgressForm() {
+    var anxietyIndex = 0;
+    for (var cc=1; cc<=5; cc++) {
+        var qName = 'q' + cc;
+        var inputEls = document.getElementsByClassName(qName);
+        for (var dd=0; dd<inputEls.length; dd++) {
+            if (inputEls[dd].checked) {
+                anxietyIndex += parseInt(inputEls[dd].value);
+            }
+        }
+    }
+    userInfo.previousVisitAnxiety.push(anxietyIndex);
+    updateUserInfo();
+}
+
+
+var progressForm = gebi('progressForm');
+var progressFormButton = gebi('submitProgressForm');
+if (progressFormButton) {
+    progressFormButton.addEventListener('click', processProgressForm);
+}
+
+
 var evalform = gebi('questionForm');
 var evalformButton = gebi('submitForm');
 if (evalformButton) {
@@ -63,4 +86,18 @@ function updateUserInfo() {
 
 function getUserInfo() {
     return JSON.parse(localStorage.userInfo);
+}
+
+var spanEls = document.getElementsByClassName('userName');
+var userInfoDestringified = JSON.parse(localStorage.userInfo);
+var userFirstName = capitalizeName(userInfoDestringified.userName);
+
+//capitalize userName in case user didn't
+function capitalizeName(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+//populate all spans with class 'userName' with (capitalized) user name
+for (var bb=0; bb<spanEls.length; bb++) {
+    spanEls[bb].textContent = userFirstName;
 }
