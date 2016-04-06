@@ -11,7 +11,7 @@ var mainImage = gebi("mainImage");
 var levelIndicator = gebi("levelIndicator");
 var imageIndicator = gebi("imageIndicator");
 var help           = gebi("help");
-
+var panic          = gebi("panic");
 
 
 lastLevelIndex=1;
@@ -26,7 +26,7 @@ indicateLevel();
 function goNextLevel () {
     if (lastLevelIndex >= imageArray.length-1){
             showPopup();
-            popupMsg.textContent = "You made it to the last level yadda yadda."
+            popupMsg.innerHTML = "This is actually the last level. Congratulations, <span class='userName'></span>, you made it! Check out our Resources page if you're interested in further treatment options."
     } else {
         lastLevelIndex= lastLevelIndex + 1;
         displayImage(lastLevelIndex,0);
@@ -42,7 +42,7 @@ nextLevel.addEventListener("click", goNextLevel ,false);
 function goLastLevel () {
     if (lastLevelIndex === 1 || lastLevelIndex === 0){
             showPopup();
-            popupMsg.textContent = "Sorry, you're at the first level.  Might want to consider professional help."
+            popupMsg.textContent = "Sorry, you're at the first level. If these images are too unsettling, Conquer It! may not be for you. Check out our Resources page for links to sites that discuss other phobia treatment options, including support groups."
     } else {
         lastLevelIndex= lastLevelIndex - 1;
         displayImage(lastLevelIndex,0);
@@ -80,6 +80,11 @@ function showHelp (){
 }
 help.addEventListener("click", showHelp, false);
 
+//display panic image
+function showPanicImage() {
+    displayImage(0, userInfo.panicImageIndex);
+}
+panic.addEventListener("click", showPanicImage, false)
 
 
 //##################### SHOW AND HIDE POPUPS ##################################################################################
