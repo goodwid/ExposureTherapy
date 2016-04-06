@@ -1,3 +1,5 @@
+@import url("header.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,68 +14,6 @@ body{
     height=100%;
 }
 
-#headExercises{
-    width: 100%;
-    position: fixed;
-}
-
-#logo{
-    width: 156px;
-    height: auto;
-    position: fixed;
-    z-index: 10;
-    left: 230px;
-    top: 16px;
-}
-#logoTxt{
-    width: 207px;
-    height: auto;
-    position: fixed;
-    z-index: 10;
-    left: 210px;
-    top: 125px;
-}
-
-nav{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 25px;
-}
-nav ul{
-    display: flex;
-    width: 40%;
-    justify-content:space-between;
-    list-style-type: none;
-    font-family: "Century Gothic";
-    margin-top: 10px;
-}
-li a{
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-
-li a:hover{
-    background-color: #b2f9ed;
-    padding: 10px;
-    color: #725e5e;
-}
-
-#HeaderWrapper{
-    width: 80%;
-    height: 120px;
-    margin: auto;
-    text-align: center;
-    background-color: #877676;
-}
-
-#menuBorder{
-    background-color: #725e5e;
-    height: 45px;
-    position: relative;
-    width: 80%;
-    margin: auto;
-}
 
 #exercisePage{
     background-color: #dbdad7;
