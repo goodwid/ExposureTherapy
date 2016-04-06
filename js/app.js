@@ -46,6 +46,6 @@ if (formButton) {
 
 function displayImage(level,index) {
     var imageEl = gebi('mainImage');
-    var imagePath = imageArray[level,index].path;
+    var imagePath = imageArray[level][index].path;
     imageEl.setAttribute('src',imagePath);
 }
