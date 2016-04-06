@@ -6,6 +6,7 @@ var simImages = gebi("simImagesButton");
 var lastLevel = gebi("lastLevelButton");
 var popupBox  = gebi("popupBox");
 var popupMsg  = gebi("popupMsg");
+var welcome   = gebi("welcomeMsg");
 var okButton  = gebi("okButton");
 var mainImage = gebi("mainImage");
 var levelIndicator = gebi("levelIndicator");
@@ -76,7 +77,14 @@ simImages.addEventListener("click", changeImage ,false);
 //display help contents in popup box-sizing
 function showHelp (){
     showPopup();
-    popupMsg.innerText = "There are eleven levels of exposure, each of which contains three images. \n\n Clicking the \"Similar Images\" button will allow you to move from one image to the next within the level you're currently in. We recommend you spend some time with all three images at each level.\n\nOnce you can view all three without feeling distressed, use the \"Next Level\" button to advance to the next set of three images.\n\n If your anxiety or fear reaches a level you are not comfortable with, use the \"Last Level\" button to return to the previous level or the panic button to instantly view the calming image you selected when you began the program.\n\n Spend as much time as you need to with each image. This will be a gradual process for most, so take however much time you need to progress from level to level."
+
+    if (userInfo.exercisesBegun == false) {
+        welcome.innerHTML = "Welcome, <span class='userName'></span>!";
+    } else {
+        welcome.innerHTML = "Here's a refresher, <span class='userName'></span>:";
+    }
+
+    popupMsg.innerHTML = "There are eleven levels of exposure, each of which contains three images. \n\n Clicking the \"Similar Images\" button will allow you to move from one image to the next within the level you're currently in. We recommend you spend some time with all three images at each level.\n\nOnce you can view all three without feeling distressed, use the \"Next Level\" button to advance to the next set of three images.\n\n If your anxiety or fear reaches a level you are not comfortable with, use the \"Last Level\" button to return to the previous level or the panic button to instantly view the calming image you selected when you began the program.\n\n Spend as much time as you need to with each image. This will be a gradual process for most, so take however much time you need to progress from level to level."
 }
 help.addEventListener("click", showHelp, false);
 
