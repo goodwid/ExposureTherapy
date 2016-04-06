@@ -7,18 +7,22 @@ localStorage should store:
 5. image viewed when user last left page
 6. previous visit dates and respective "level reached" numbers (for chart)
 */
-
+var userInfo = {};
 //OBJECT THAT WILL BE STORED IN LOCALSTORAGE AND WILL TRACK USER DETAILS/PROGRESS
-var userInfo = {
-  evalComplete: false,
-  userName: '',
-  recommendedStartLevel: 10,
-  exercisesBegun: false,
-  lastLevelIndex: 1,
-  lastImageIndex: 0,
-  panicImageIndex: 0,
-  previousVisitLevels: [],
-  previousVisitAnxiety: []
+function initUserInfo() {
+    if (localStorage.userInfo) {
+        userInfo = JSON.parse(localStorage.userInfo);
+    } else {
+        var userInfo = {
+          evalComplete: false,
+          userName: '',
+          lastLevelIndex: 10,
+          lastImageIndex: 0,
+          panicImageIndex: 0,
+          previousVisitLevels: [],
+          previousVisitAnxiety: []
+        }
+    }
 }
 
 function processProgressForm() {
@@ -36,13 +40,29 @@ function processProgressForm() {
     updateUserInfo();
 }
 
+function displayImage(level,index) {
+    var imageEl = gebi('mainImage');
+    var imagePath = imageArray[level][index].path;
+    imageEl.setAttribute('src',imagePath);
+}
+
+function storeUserInfo() {
+    localStorage.userInfo = JSON.stringify(userInfo);
+}
+
+//capitalize userName in case user didn't
+function capitalizeName(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+initUserInfo();
 
 var progressForm = gebi('progressForm');
 var progressFormButton = gebi('submitProgressForm');
 if (progressFormButton) {
     progressFormButton.addEventListener('click', processProgressForm);
 }
-
+var spanEls = document.getElementsByClassName('userName');
 
 var evalform = gebi('questionForm');
 var evalformButton = gebi('submitForm');
@@ -58,46 +78,22 @@ if (evalformButton) {
             if (!userName) {
                 alert('Username is required!  Please fill out your first name.');
             } else {
-                userInfo.userName = userName;
+                userInfo.userName = capitalizeName(userName);
                 userInfo.panicImageIndex = panicImageIndex;
+                userInfo.evalComplete = true;
 
-                if (evalform.elements.q5.value === 'true') { userInfo.recommendedStartLevel = 10;}
-                if (evalform.elements.q4.value === 'true') { userInfo.recommendedStartLevel = 8;}
-                if (evalform.elements.q3.value === 'true') { userInfo.recommendedStartLevel = 5;}
-                if (evalform.elements.q2.value === 'true') { userInfo.recommendedStartLevel = 2;}
-                if (evalform.elements.q1.value === 'true') { userInfo.recommendedStartLevel = 1;}
-
-                console.log(userInfo.recommendedStartLevel);
-                updateUserInfo();
+                if (evalform.elements.q5.value === 'true') { userInfo.lastLevelIndex = 10;}
+                if (evalform.elements.q4.value === 'true') { userInfo.lastLevelIndex = 8;}
+                if (evalform.elements.q3.value === 'true') { userInfo.lastLevelIndex = 5;}
+                if (evalform.elements.q2.value === 'true') { userInfo.lastLevelIndex = 2;}
+                if (evalform.elements.q1.value === 'true') { userInfo.lastLevelIndex = 1;}
+                storeUserInfo();
             }
         }
     })
 }
 
-function displayImage(level,index) {
-    var imageEl = gebi('mainImage');
-    var imagePath = imageArray[level][index].path;
-    imageEl.setAttribute('src',imagePath);
-}
-
-function updateUserInfo() {
-    localStorage.userInfo = JSON.stringify(userInfo);
-}
-
-function getUserInfo() {
-    return JSON.parse(localStorage.userInfo);
-}
-
-var spanEls = document.getElementsByClassName('userName');
-var userInfoDestringified = JSON.parse(localStorage.userInfo);
-var userFirstName = capitalizeName(userInfoDestringified.userName);
-
-//capitalize userName in case user didn't
-function capitalizeName(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1);
-}
-
 //populate all spans with class 'userName' with (capitalized) user name
 for (var bb=0; bb<spanEls.length; bb++) {
-    spanEls[bb].textContent = userFirstName;
+    spanEls[bb].textContent = userInfo.userName;
 }
