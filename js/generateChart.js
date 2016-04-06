@@ -9,7 +9,14 @@ previousVisitEvalResults
 //visitEvalResults: [6, 5, 5, 4];
 
 function generateChartData(visitInfo) {     //where parameter visitInfo is either visitLevels or visitEvalResults
-    var visitData = {};
-    visitData.visits = [];
-    for (aa=0; aa<userInfo[chart])
+    var chartData = {};
+    chartData.visits = [];
+    for (var aa=1; aa<=userInfo[visitInfo].length; aa++) {
+        charttData.visits.push('Visit ' + aa);
+    }
+    if (visitInfo = visitLevels) {
+        chartData.axisTitle = 'Max Level Reached';
+    } else {
+        chartData.axisTitle = 'Phobic Index';
+    }
 }
