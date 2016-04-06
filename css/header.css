@@ -1,0 +1,79 @@
+header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    height: 165px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #877676;
+}
+
+bigbutton {
+    color: #F97d7d;
+    other: #F75C5C; // pink from the logo
+}
+
+#logo {
+    width: 156px;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    left: 230px;
+    top: 16px;
+}
+
+#logoTxt {
+    width: 207px;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    left: 210px;
+    top: 125px;
+}
+
+#HeaderWrapper{
+    width: 80%;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+    background-color: #877676;
+}
+
+#menuBorder{
+    background-color: #725e5e;
+    height: 45px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+nav ul {
+    display: flex;
+    width: 40%;
+    justify-content:space-between;
+    list-style-type: none;
+    font-family: "Century Gothic";
+    margin-top: 40px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+li a:hover{
+    background-color: #b2f9ed;
+    /*padding: 10px;*/
+    color: #725e5e;
+}
