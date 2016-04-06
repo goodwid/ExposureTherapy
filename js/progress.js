@@ -1,29 +1,20 @@
-var progressForm = gebi('questionForm');
-var formButton = gebi('submitForm');
-if (formButton) {
-    formButton.addEventListener('click', function () {
-        var userName = form.elements.inputName.value;
-        var panicImageIndex = parseInt(form.elements.panicimage.value);
-        var phobia = form.elements.phobia.value;
-        if (phobia === 'other') {
-            alert('We regret that currently, Conquer It! only addresses arachnophobia.');
-            gebi('arach').checked = true;
-        } else {
-            if (!userName) {
-                alert('Username is required!  Please fill out your first name.');
-            } else {
-                userInfo.userName = userName;
-                userInfo.panicImageIndex = panicImageIndex;
+var progressForm = gebi('progressForm');
+var progressFormButton = gebi('submitProgressForm');
+if (progressFormButton) {
+    progressFormButton.addEventListener('click', )
+}
 
-                if (form.elements.q5.value === 'true') { userInfo.recommendedStartLevel = 10;}
-                if (form.elements.q4.value === 'true') { userInfo.recommendedStartLevel = 8;}
-                if (form.elements.q3.value === 'true') { userInfo.recommendedStartLevel = 5;}
-                if (form.elements.q2.value === 'true') { userInfo.recommendedStartLevel = 2;}
-                if (form.elements.q1.value === 'true') { userInfo.recommendedStartLevel = 1;}
+function processProgressForm() {
+    var anxietyIndex = 0;
+    for (var cc=1; cc<=10; cc++) {
+        var qName = 'q' + cc;
+        var selector = 'input[name = ' + qName + ']:checked';
+        var rating = document.querySelector(selector.)
+    }
+    var phobia = form.elements.phobia.value;
+            userInfo.panicImageIndex = panicImageIndex;
 
-                console.log(userInfo.recommendedStartLevel);
-                updateUserInfo();
-            }
+            updateUserInfo();
         }
-    })
+    }
 }
