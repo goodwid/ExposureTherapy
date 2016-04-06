@@ -1,3 +1,5 @@
+@import url("header.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -79,6 +81,7 @@ li a:hover{
     margin: auto;
     min-width: 580px;
 }
+
 
 #exercisePage{
     background-color: #dbdad7;
