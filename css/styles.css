@@ -119,9 +119,12 @@ ul {
 li {
 }
 #mainImage{
-    
+
 
 }
+
+#exercisePage{
+    }
 
 #popup{
     width:  50%;
@@ -131,10 +134,10 @@ li {
     border: 1px;
     float: left;
     position: absolute;
+}
 
 
 }
-
 form{
  width:590px;
  margin-left: 300px;
