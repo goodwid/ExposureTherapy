@@ -90,6 +90,7 @@ function resumeFromPanicPage() {
     lastLevelButton.style.visibility="visible";
     nextLevelButton.style.visibility="visible";
     simImagesButton.value="Similar Images";
+    simImagesButton.blur();
     locationDiv.style.visibility="visible";
 }
 
