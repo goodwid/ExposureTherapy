@@ -36,15 +36,16 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 50px;
     color: #FFF;
     width: 75%;
     margin: 0 auto;
-    background-color: #327c7a;
+    background-color: #609C9A;
     border-radius: 10px;
     box-shadow: 15px 15px 25px gray;
     margin-top: 150px;
     margin-bottom: 50px;
+    border: 2px solid rgb(114, 94, 94);
 }
 
 #progressForm h3, #instructions {
@@ -56,14 +57,15 @@ body {
 
 #progressForm h3 {
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 #instructions {
-    height: 160px;
+    height: 150px;
 }
 
 #instructions p:nth-child(2) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #instructions p:nth-child(3) {
@@ -80,7 +82,9 @@ body {
     margin: 0 auto;
 }
 
-#mainContent{
+
+
+/*#mainContent{
     background-color: #327c7a;
     position: relative;
     top: 250px;
@@ -88,8 +92,7 @@ body {
     margin: 0 auto;
     padding: 30px;
     color: #FFF;
-}
-
+}*/
 
 /*#mainContent{
     background-color: lightyellow;
