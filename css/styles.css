@@ -14,109 +14,93 @@ body {
     height=100%;
 }
 
-#mainContent{
-    background-color: #dbdad7;
-}
-
-h1 {
-    font-size: 2.5em;
-    padding: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: red;
-}
-
-.questionTxt {
-    padding-bottom: 10px;
-}
-
-.radio-inline {
-    margin: 1px;
-}
-
-
 .buttonStyle {
     background-color: #b2f9ed;
     height: 30px;
     width: 90px;
-    border: 4px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     border-radius: 3px;
     text-align: center;
     clear: both;
+    color: white;
 }
 
-#mainContent {
-    position: relative;
-    top: 180px;
-    width: 75%;
-    margin: 0 auto;
+/*TAYLOR'S STYLING*/
+.questionTxt, .tfquestionTxt {
+    padding: 0;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-section {
-    color: #76AB89;
+#progressForm {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 50px;
+    color: #FFF;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #609C9A;
+    border-radius: 10px;
+    box-shadow: 15px 15px 25px gray;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    border: 2px solid rgb(114, 94, 94);
 }
 
-p + p {
-    margin-top: 15px;
-}
-
-h2 {
-    font-size: 3em;
-    text-align: center;
-    padding: 10px 0;
-}
-
-figure {
-    height: 200px;
-    width: 200px;
-}
-
-img {
-    height: 180px;
-    width: 180px;
-}
-
-#popup{
-    width:  50%;
-    height: 50%;
-    margin-left: 100px;
-    top: 100px;
-    border: 1px;
-    float: left;
-    position: absolute;
-}
-
-#dogs{
+#progressForm h3, #instructions {
     display: flex;
-    justify-content: space-between;
-    width: 225px;
+    flex-direction: column;
+    align-content: space-between;
+    text-align: center;
 }
 
-.dogs{
-    box-shadow: 4px 4px 8px #898989;
+#progressForm h3 {
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
-#easyDog{
-    height: 180px;
+#instructions {
+    height: 150px;
 }
 
-#medDog{
-    margin-left: 30px;
-    height: 180px;
+#instructions p:nth-child(2) {
+    margin-bottom: 30px;
 }
-#photoDog{
-    margin-left: 30px;
-    height: 180px;
+
+#instructions p:nth-child(3) {
+    text-align: left;
 }
+
+.qAWrapper {
+    padding-bottom: 20px;
+}
+
+#submitButton {
+    background-color: #F97D7D;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
 #chartContainer {
+    width: 65%;
     display: none;
+    margin: 0 auto;
+    /*position: fixed;*/
+    margin-top: 185px;
 }
+
 #chartContainer div {
     margin-top: 20px;
     width: 100%;
+}
+
+#mainContent{
+    background-color: #327c7a;
+    position: relative;
+    top: 250px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px;
+    color: #FFF;
 }
