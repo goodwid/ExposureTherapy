@@ -113,6 +113,10 @@ img {
     margin-left: 30px;
     height: 180px;
 }
-#achieveChart {
+#chartContainer {
     display: none;
+}
+#chartContainer div {
+    margin-top: 20px;
+    width: 100%;
 }

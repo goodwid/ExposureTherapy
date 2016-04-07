@@ -35,8 +35,10 @@
                 <p>
                     <span class="userName"></span>, the chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don't get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You're working to conquer your fear, <span class="userName"></span>, and you should be proud of that!
                 </p>
-
-                <div id="achieveChart"></div>
+                <div id="chartContainer">
+                    <div id="levelChart"></div>
+                    <div id="phobiaChart"></div>
+                </div>
             </section>
 
             <section id="formPopup">
@@ -124,7 +126,7 @@
                            <label class="radio-inline"><input class="q5" type=radio name="q5" value="10">10</label>
                            </p>
                        </div>
-                       <input id="submitButton" class="buttonStyle"  value="Submit"/>
+                       <input id="submitButton" class="buttonStyle" type="button"  value="Submit"/>
                    </fieldset>
                </form>  <!--#progressForm -->
            </section>  <!--#formPopup-->
