@@ -10,12 +10,13 @@ function goNextLevel () {
             popupMsg.innerHTML = "This is actually the last level. Congratulations, <span class='userName'></span>, you made it! Check out our Resources page if you're interested in further treatment options."
     } else {
         userInfo.lastLevelIndex= userInfo.lastLevelIndex + 1;
+        userInfo.lastImageIndex=0;
         if (userInfo.lastLevelIndex > todaysHighestLevel) {
             todaysHighestLevel = userInfo.lastLevelIndex;
         }
         displayImage(userInfo.lastLevelIndex,0);
-        indicateLevel();
         storeUserInfo();
+        indicateLevel();
     }
 }
 
@@ -29,6 +30,7 @@ function goLastLevel () {
             popupMsg.textContent = "Sorry, you're at the first level. If these images are too unsettling, Conquer It! may not be for you. Check out our Resources page for links to sites that discuss other phobia treatment options, including support groups."
     } else {
         userInfo.lastLevelIndex= userInfo.lastLevelIndex - 1;
+        userInfo.lastImageIndex=0;
         displayImage(userInfo.lastLevelIndex,0);
         indicateLevel();
         storeUserInfo();
