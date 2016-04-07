@@ -5,9 +5,6 @@
 // }
 
 function showCharts() {
-    if (!userInfo.evalComplete) {
-        chartIntro.textContent = 'The chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don\'t get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You\'re working to conquer your fear, and you should be proud of that!';
-    }
     hideEl(formPopup);
     showEl(chartContainer);
     createLevelChart (generateChartData(userInfo.previousVisitLevels));
@@ -51,8 +48,9 @@ function generateChartData(data) {
         tempdata = tempdata.concat(data.slice(-10));    // Grab last 10 elements of the array.
     } else {
         tempdata = data;
+        labels = templabels;
     }
-    for (var i=0;i < Math.max(labels.length, tempdata.length) ;i++) {
+    for (var i=0;i < Math.min(labels.length, tempdata.length) ;i++) {
         chartData.dataPoints.push([labels[i],tempdata[i]]);
     }
 
@@ -211,7 +209,6 @@ function showEl(el) {
 var chartSection = gebi('chartSection');
 var formPopup = gebi('formPopup');
 var submitButton = gebi('submitButton');
-var chartIntro = gebi('chartIntro');
 var chartContainer = gebi('chartContainer');
 
 // hideEl(formPopup);

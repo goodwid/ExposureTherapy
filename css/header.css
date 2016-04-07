@@ -9,11 +9,6 @@ header {
     z-index: 9;
 }
 
-bigbutton {
-    color: #F97d7d;
-    other: #F75C5C; // pink from the logo
-}
-
 #logo {
     width: 156px;
     height: auto;
@@ -33,7 +28,6 @@ bigbutton {
 }
 
 #HeaderWrapper{
-    /*width: 80%;*/
     height: 120px;
     margin: 0 auto;
     text-align: center;
