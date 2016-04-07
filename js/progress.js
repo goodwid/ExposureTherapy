@@ -8,8 +8,9 @@ function showCharts() {
     if (!userInfo.evalComplete) {
         chartIntro.textContent = 'The chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don\'t get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You\'re working to conquer your fear, and you should be proud of that!';
     }
-    formPopup.style.display = 'none';
-    chartSection.style.display = 'flex';
+    hideEl(formPopup);
+    showEl(chartEl);
+    createChart (generateChartData());
 }
 
 function processQuestionnaire() {
@@ -45,7 +46,7 @@ function generateChartData() {
     return chartData;
 }
 
-function showChart(data) {   // uses highcharts to display data, function taken from snippet on highcharts' website and modded.
+function createChart(data) {   // uses highcharts to display data, function taken from snippet on highcharts' website and modded.
     $('#achieveChart').highcharts({
         chart: {
             zoomType: 'xy',
@@ -122,15 +123,21 @@ function showChart(data) {   // uses highcharts to display data, function taken 
         }]
     });
 }
+function hideEl(el) {
+    el.style.display = 'none';
+}
 
-
+function showEl(el) {
+    el.style.display = 'block';
+}
 
 var chartSection = gebi('chartSection');
 var formPopup = gebi('formPopup');
-var submitButton = gebi('submitProgressForm');
+var submitButton = gebi('submitButton');
 var chartIntro = gebi('chartIntro');
+var chartEl = gebi('achieveChart');
 
-showChart (generateChartData());
-// submitButton.addEventListener('click', processQuestionnaire, false);
+// hideEl(formPopup);
+submitButton.addEventListener('click', processQuestionnaire, false);
 
 // window.onload = showQuestionnaire();
