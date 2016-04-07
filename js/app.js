@@ -34,15 +34,18 @@ function processProgressForm() {
 function displayImage(level,index) {
     var imageEl = gebi('mainImage');
     var videoEl = gebi('video');
+    var imgWrap = gebi('imgWrap');
     var imagePath = imageArray[level][index].path;
     if (level < 10){
     imageEl.setAttribute('src',imagePath);
     imageEl.style.display="block";
     videoEl.style.display='none';
+    imgWrap.style.backgroundColor="white";
 }  else {
     videoEl.setAttribute('src',imagePath);
     imageEl.style.display='none';
     videoEl.style.display='block';
+    imgWrap.style.backgroundColor="black";
     }
 }
 
