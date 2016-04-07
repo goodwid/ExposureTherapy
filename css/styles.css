@@ -28,12 +28,23 @@ a {
     color: red;
 }
 
+.questionTxt {
+    padding-bottom: 10px;
+}
+
+.radio-inline {
+    margin: 1px;
+}
+
+
 .buttonStyle {
-    background-color: #f4a126;
-    height: 60px;
-    width: 170px;
+    background-color: #b2f9ed;
+    height: 30px;
+    width: 90px;
     border: 4px solid #FFFFFF;
     border-radius: 3px;
+    text-align: center;
+    clear: both;
 }
 
 #mainContent {

@@ -90,6 +90,7 @@ function resumeFromPanicPage() {
     lastLevelButton.style.visibility="visible";
     nextLevelButton.style.visibility="visible";
     simImagesButton.value="Similar Images";
+    simImagesButton.blur();
     locationDiv.style.visibility="visible";
 }
 
@@ -166,6 +167,13 @@ nextLevel.addEventListener("click", goNextLevel ,false);
 help.addEventListener("click", showHelp, false);
 simImages.addEventListener("click", changeImage ,false);
 lastLevel.addEventListener("click", goLastLevel ,false);
-okButton.addEventListener("click", hidePopup, false);  //OK BUTTON ON FORM TO TRIGGER HIDE POPUP FUNCTION
 
-//##################################################################################################################
+//OK BUTTON ON FORM TO TRIGGER HIDE POPUP FUNCTION
+okButton.addEventListener("click", hidePopup, false);
+
+//spacebar event listener to show panic image
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode == '32') {
+    showPanicImage();
+  }
+});
