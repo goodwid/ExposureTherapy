@@ -44,9 +44,11 @@ function changeImage () {
     if (userInfo.lastImageIndex ===2){
         userInfo.lastImageIndex = 0;
         indicateLevel();
+        resumeFromPanicPage();
     } else {
         userInfo.lastImageIndex = userInfo.lastImageIndex +1;
         indicateLevel();
+        resumeFromPanicPage();
     }
 
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
@@ -74,7 +76,23 @@ function showHelp (){
 //display panic image
 function showPanicImage() {
     displayImage(0, userInfo.panicImageIndex);
+    layoutPanicPage();
 }
+
+function layoutPanicPage () {
+    lastLevelButton.style.visibility="hidden";
+    nextLevelButton.style.visibility="hidden";
+    simImagesButton.value="Resume";
+    locationDiv.style.visibility="hidden";
+}
+
+function resumeFromPanicPage() {
+    lastLevelButton.style.visibility="visible";
+    nextLevelButton.style.visibility="visible";
+    simImagesButton.value="Similar Images";
+    locationDiv.style.visibility="visible";
+}
+
 
 //##################### SHOW AND HIDE POPUPS ##################################################################################
 //display popup
@@ -128,6 +146,7 @@ var help           = gebi("help");
 var panic          = gebi("panic");
 var questionForm   = gebi('questionForm');
 var exercisePage   = gebi('exercisePage');
+var locationDiv    = gebi('location');
 
 if (!localStorage.userInfo) {
     showForm();
