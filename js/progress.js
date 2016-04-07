@@ -33,7 +33,7 @@ function processQuestionnaire() {
 
 function generateLevelChartData() {
     var chartData = {};
-
+    chartData.barColor = '#b2f9ed';
     chartData.labels = [];
     chartData.labels.push('Starting Point');
     for (var aa=1; aa <= userInfo.previousVisitLevels.length; aa++) {
@@ -50,7 +50,7 @@ function generateLevelChartData() {
 
 function generatePhobiaChartData() {
     var chartData = {};
-
+    chartData.barColor = '#b2f9ed';
     chartData.labels = [];
     chartData.labels.push('Starting Point');
     for (var bb=1; bb <= userInfo.previousVisitAnxiety.length; bb++) {
@@ -114,7 +114,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
             name: data.axisTitle,
             data: data.dataPoints,
             type: 'column',
-            color: '#00041F',
+            color: data.barColor,
             tooltip: {
                 valueSuffix: ''
             },
@@ -183,7 +183,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
             name: data.axisTitle,
             data: data.dataPoints,
             type: 'column',
-            color: '#00041F',
+            color: data.barColor,
             tooltip: {
                 valueSuffix: ''
             },
