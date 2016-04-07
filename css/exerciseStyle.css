@@ -18,11 +18,14 @@ body{
     background-color: #dbdad7;
     position: relative;
     width: 80%;
+    max-width: 911px;
     min-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -45px;
-    top: 180px;
+    margin-bottom: 50px;
+    top: 210px;
+    padding: 50px;
+    border-radius: 5px;
 }
 #imgWrap{
     width: 550px;
@@ -133,11 +136,11 @@ legend{
 #okButton{
     margin-top: 250px;
 }
-#exercisePage:after{
+/*#exercisePage:after{
     content:"";
     display: block;
     height: 105px;
-}
+}*/
 footer{
     background-color: #725e5e;
     height: 25px;
