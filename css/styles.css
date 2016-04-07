@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     background-image: url("../images/kimImgs/wild_flowers.png");
     background-repeat: repeat;
     height=100%;
@@ -25,7 +25,6 @@ body {
     color: white;
 }
 
-/*TAYLOR'S STYLING*/
 .questionTxt, .tfquestionTxt {
     padding: 0;
     margin-bottom: 10px;
