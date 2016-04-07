@@ -10,8 +10,8 @@ function showCharts() {
     }
     hideEl(formPopup);
     showEl(chartContainer);
-    createLevelChart (generateLevelChartData());
-    createPhobiaChart (generatePhobiaChartData());
+    createLevelChart (generateChartData(userInfo.previousVisitLevels));
+    createPhobiaChart (generateChartData(userInfo.previousVisitAnxiety));
 
 }
 
@@ -31,51 +31,35 @@ function processQuestionnaire() {
     showCharts();
 }
 
-function generateLevelChartData() {
+function generateChartData(data) {
     var chartData = {};
-    dataLength = userInfo.previousVisitLevels.length;
+    dataLength = data.length;
     var labels = [];
+    var templabels = [];
     var tempdata = [];
     chartData.barColor = '#b2f9ed';
     chartData.dataPoints = [];
 
-    labels.push('Starting Point');
+    templabels.push('Starting Point');
     for (var aa=1; aa <= dataLength; aa++) {
-        labels.push('Visit ' + aa);
+        templabels.push('Visit ' + aa);
     }
     if (dataLength >10) {
-        tempdata[0] = userInfo.previousVisitLevels[0];
-        tempdata.push(userInfo.previousVisitLevels.slice(-10));    // Grab last 10
+        labels[0] = templabels[0];
+        labels = labels.concat(templabels.slice(-10));
+        tempdata[0] = data[0];
+        tempdata = tempdata.concat(data.slice(-10));    // Grab last 10 elements of the array.
     } else {
-        tempdata = userInfo.previousVisitLevels;
+        tempdata = data;
     }
     for (var i=0;i < Math.max(labels.length, tempdata.length) ;i++) {
         chartData.dataPoints.push([labels[i],tempdata[i]]);
     }
-    chartData.chartTitle = 'Highest Level Reached By Visit'
-    chartData.axisTitle = 'Highest Level Reached';
-
-    // chartData.chartTitle = 'Summary of Visit Levels';
 
     return chartData;
 }
 
-function generatePhobiaChartData() {
-    var chartData = {};
-    chartData.barColor = '#b2f9ed';
-    chartData.labels = [];
-    chartData.labels.push('Starting Point');
-    for (var bb=1; bb <= userInfo.previousVisitAnxiety.length; bb++) {
-        chartData.labels.push('Visit ' + bb);
-    }
-    chartData.chartTitle = 'Phobic Index By Visit'
-    chartData.axisTitle = 'Phobic Index';
-    chartData.dataPoints = [userInfo.previousVisitAnxiety[0]];
-    chartData.dataPoints = userInfo.previousVisitAnxiety.slice(Math.max(userInfo.previousVisitAnxiety.length-10,0));   // grab only the last 10 data points.
-    // chartData.chartTitle = 'Summary of Phobic Index';
 
-    return chartData;
-}
 
 function createLevelChart(data) {   // uses highcharts to display data, function taken from snippet on highcharts' website and modded.
     $('#levelChart').highcharts({
@@ -84,7 +68,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
             backgroundColor: '#E0CCD3'
         },
         title: {
-            text: data.chartTitle
+            text: 'Highest Level Reached By Visit'
         },
         subtitle: {
             text: '(showing the last 10 visits)'
@@ -110,7 +94,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
                     // }
                 },
                 title: {
-                    text: data.AxisTitle,
+                    text: 'Highest Level Reached',
                     style: {
                         color: '#E0CCD3'
                     }
@@ -124,7 +108,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
             enabled: false
         },
         series: [{
-            name: data.axisTitle,
+            name: 'Highest Level Reached',
             data: data.dataPoints,
             type: 'column',
             color: data.barColor,
@@ -154,7 +138,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
             backgroundColor: '#E0CCD3'
         },
         title: {
-            text: data.chartTitle
+            text: 'Phobic Index By Visit'
         },
         subtitle: {
             text: '(showing the last 10 visits)'
@@ -179,7 +163,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
                     // }
                 },
                 title: {
-                    text: data.AxisTitle,
+                    text: 'Phobic Index',
                     style: {
                         color: Highcharts.getOptions().colors[1]
                     }
@@ -193,7 +177,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
             enabled: false
         },
         series: [{
-            name: data.axisTitle,
+            name: 'Phobic Index',
             data: data.dataPoints,
             type: 'column',
             color: data.barColor,
