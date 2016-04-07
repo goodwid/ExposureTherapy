@@ -162,8 +162,10 @@ if (!localStorage.userInfo) {
 }
 
 window.onbeforeunload = function () {
-    userInfo.previousVisitLevels.push(todaysHighestLevel);
-    storeUserInfo();
+    if (userInfo.evalComplete === true) {
+        userInfo.previousVisitLevels.push(todaysHighestLevel);
+        storeUserInfo();
+    }
 }
 
 panic.addEventListener("click", showPanicImage, false);
