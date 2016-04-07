@@ -13,7 +13,7 @@ function initUserInfo() {
     if (localStorage.userInfo) {
         userInfo = JSON.parse(localStorage.userInfo);
     } else {
-        var userInfo = {
+        userInfo = {
           evalComplete: false,
           userName: '',
           lastLevelIndex: 10,
@@ -28,7 +28,7 @@ function initUserInfo() {
 function processProgressForm() {
     var anxietyIndex = 0;
     for (var cc=1; cc<=5; cc++) {
-        var qName = 'q' + cc;
+        var qName = 'nq' + cc;
         var inputEls = document.getElementsByClassName(qName);
         for (var dd=0; dd<inputEls.length; dd++) {
             if (inputEls[dd].checked) {
@@ -89,9 +89,25 @@ if (evalformButton) {
                 if (evalform.elements.q1.value === 'true') { userInfo.lastLevelIndex = 1;}
 
                 userInfo.previousVisitLevels.push (userInfo.lastLevelIndex);
+                var anxietyIndex = 0;
+                for (var cc=1; cc<=5; cc++) {
+                    var qName = 'nq' + cc;
+                    var inputEls = document.getElementsByClassName(qName);
+                    for (var dd=0; dd<inputEls.length; dd++) {
+                        if (inputEls[dd].checked) {
+                            anxietyIndex += parseInt(inputEls[dd].value);
+                        }
+                    }
+                }
+                userInfo.previousVisitAnxiety.push(anxietyIndex);
                 storeUserInfo();
+                hideForm();
+                showExercise();
+                displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
+                indicateLevel();
             }
         }
+
     })
 }
 
