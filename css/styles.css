@@ -92,23 +92,28 @@ body {
 #chartContainer {
     width: 65%;
     display: none;
-    position: fixed;
+    position: relative;
     top: 165px;
     height: 100%;
     width: 100%;
     overflow: scroll;
     text-align: center;
     padding: 50px 100px;
+    color: #327c7a;
+}
+
+#chartContainer h2 {
+    text-transform: uppercase;
+}
+
+#chartContainer p {
+    max-width: 600px;
+    margin: 10px auto 50px auto;
 }
 
 #chartContainer div {
     margin: 20px auto 0 auto;
     width: 100%;
-}
-
-#chartContainer p {
-    max-width: 550px;
-    margin: 0 auto;
 }
 
 #mainContent{
