@@ -107,7 +107,7 @@ input[name=navButtons]:hover{
     color: #725e5e;
 }
 form {
-    padding: 20px;
+    padding: 40px;
     display: none;
     height: auto;
     width: 75%;
@@ -117,8 +117,8 @@ form {
     background-color: #877676;
     border-radius: 10px;
     margin: 0 auto;
-    /*left: 20%;*/
-    box-shadow: 5px 5px 5px #898989;
+    box-shadow: 10px 10px 10px #898989;
+    margin-bottom: 50px;
 }
 fieldset{
     background-color: white;
@@ -148,4 +148,29 @@ footer{
     display: block;
     z-index: 5;
     top:200px;
+}
+
+/*TAYLOR'S STYLING FOR FORM*/
+.questionDiv {
+    margin-bottom: 15px;
+}
+
+#numericalIntro {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buttonStyle {
+    background-color: #FFF;
+    height: 30px;
+    width: 90px;
+    border: 2px solid ##877676;
+    border-radius: 5px;
+    text-align: center;
+    color: #877676;
+}
+
+#formHeader {
+    margin: 0 auto;
+    text-align: center;
 }
