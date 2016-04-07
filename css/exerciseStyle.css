@@ -91,7 +91,7 @@ input[name=navButtons]:hover{
     background-color: #b2f9ed;
     color: #725e5e;
 }
-form{
+form {
     padding: 20px;
     display: none;
     height: 500px;

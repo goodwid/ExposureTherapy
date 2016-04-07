@@ -13,7 +13,7 @@ function initUserInfo() {
     if (localStorage.userInfo) {
         userInfo = JSON.parse(localStorage.userInfo);
     } else {
-        var userInfo = {
+        userInfo = {
           evalComplete: false,
           userName: '',
           lastLevelIndex: 10,
@@ -90,8 +90,11 @@ if (evalformButton) {
 
                 userInfo.previousVisitLevels.push (userInfo.lastLevelIndex);
                 storeUserInfo();
+                hideForm();
+                showExercise();
             }
         }
+
     })
 }
 

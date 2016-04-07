@@ -44,16 +44,160 @@
                     <input id="nextLevelButton" type = "submit" name ="navButtons" value ="Next Level" />
                     <img id="panic" src= "images/kimImgs/panicIcon.png" />
                   </div>
-                 <form id="popupBox">
-                    <fieldset>
-                        <legend id="welcomeMsg"></legend>
-                        <p id="popupMsg">popup message goes here</p>
-                        <input class="buttonStyle" id="okButton" type = "submit" name ="navButtons" value ="OK" />
-                    </fieldset>
-                </form>
+      </section>
 
 
-        </section>
+        <form id="questionForm">
+            <div id="formWrapper">
+
+                <div id="formHeader">
+                    <h3>Let's get you started</h3>
+                    <p>Answering the following questions will help us start you at the level best suited for your needs.</p>
+                </div></br>
+
+                <p class=questionTxt>
+                    What's your first name?
+                    <input id="inputName" type=text size="35" required>
+                </p>
+
+                <div id="qPhobiaType">
+                    <p class="questionTxt">What phobia will you be addressing?
+                    <label class="radio-inline"><input id="arach" type=radio name="phobia" value="arach" checked>Arachnophobia</label>
+                    <label class="radio-inline"><input type=radio name="phobia" value="other">Other</label>
+                    </p>
+                </div>
+
+                <div id="qPanicImage">
+                    <p class="questionTxt">Throughout the exercises you will have the option to hit a panic button which will instantly replace the image you're viewing with a more pleasing image. Which of the following would you prefer to see?
+                    <label class="radio-inline"><input type=radio name="panicimage" value="0">Puppies</label>
+                    <label class="radio-inline"><input type=radio name="panicimage" value="1" checked>Kittens</label>
+                    <label class="radio-inline"><input type=radio name="panicimage" value="2">Scenery</label>
+
+                    </p>
+                </div>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">I feel anxious or uncomfortable seeing the word "spider" or hearing someone say the word "spider."</p>
+                    <label class="radio-inline"><input type=radio name="q1" value=true checked> True</label>
+                    <label class="radio-inline"><input type=radio name="q1" value=false> False</label>
+                </div>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">If I were to watch a cartoon featuring a friendly spider character, I would feel anxious or uncomfortable.</p>
+                    <label class="radio-inline"><input type=radio name="q2" value=true checked> True</label>
+                    <label class="radio-inline"><input type=radio  name="q2" value=false> False</label>
+                </div>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">Seeing a dead spider makes me feel fearful or uncomfortable.</p>
+                    <label class="radio-inline"><input type=radio name="q3" value=true checked> True</label>
+                    <label class="radio-inline"><input type=radio  name="q3" value=false> False</label>
+                </div>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">I cannot touch a photograph or drawing of a spider without becoming anxious or uncomfortable.</p>
+                    <label class="radio-inline"><input type=radio name="q4" value=true checked> True</label>
+                    <label class="radio-inline"><input type=radio  name="q4" value=false> False</label>
+                </div>
+
+                <div class="tfQuestions">
+                    <p class="tfQuestionTxt">I cannot watch a non-animated video of a spider in nature without becoming anxious or uncomfortable.</p>
+                    <label class="radio-inline"><input type=radio name="q5" value=true checked> True</label>
+                    <label class="radio-inline"><input type=radio name="q5" value=false> False</label> </br>
+                </div>
+
+                <div id="numericalIntro">
+                    <p>
+                        How anxious or uncomfortable would you feel...
+                    </p>
+                </div>  <!--#numericalIntro-->
+
+                <div id="q1">
+                    <p class="questionTxt">...if you were to read a non-illustrated, informational article about spiders?
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="1">1</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="2">2</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="3">3</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="4">4</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="5" checked>5</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="6">6</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="7">7</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="8">8</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="9">9</label>
+                    <label class="radio-inline"><input class="nq1" type=radio name="nq1" value="10">10</label>
+                    </p>
+                </div>  <!--#q1-->
+
+                <div id="q2">
+                    <p class="questionTxt">...if you looked at a photograph of a spider?
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="1">1</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="2">2</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="3">3</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="4">4</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="5" checked>5</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="6">6</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="7">7</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="8">8</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="9">9</label>
+                    <label class="radio-inline"><input class="nq2" type=radio name="nq2" value="10">10</label>
+                    </p>
+                </div>  <!--#q2-->
+
+                <div id="q3">
+                    <p class="questionTxt">...if you saw a spider and knew for certain it was NOT dangerous to humans?
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="1">1</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="2">2</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="3">3</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="4">4</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="5" checked>5</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="6">6</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="7">7</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="8">8</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="9">9</label>
+                    <label class="radio-inline"><input class="nq3" type=radio name="nq3" value="10">10</label>
+                    </p>
+                </div>  <!--#q3-->
+
+                <div id="q4">
+                    <p class="questionTxt">...if you saw a live spider 10 feet away from you?
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="1">1</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="2">2</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="3">3</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="4">4</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="5" checked>5</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="6">6</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="7">7</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="8">8</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="9">9</label>
+                    <label class="radio-inline"><input class="nq4" type=radio name="nq4" value="10">10</label>
+                    </p>
+                </div>  <!--#q4-->
+
+                <div id="q5">
+                    <p class="questionTxt">...if you watched another person pick up a live spider?
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="1">1</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="2">2</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="3">3</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="4">4</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="5" checked>5</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="6">6</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="7">7</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="8">8</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="9">9</label>
+                    <label class="radio-inline"><input class="nq5" type=radio name="nq5" value="10">10</label>
+                    </p>
+                </div>  <!--#q5-->
+
+                <input id="submitForm" class="buttonStyle"  value="submit"/>
+            </div>
+        </form>
+
+        <form id="popupBox">
+           <fieldset>
+               <legend id="welcomeMsg"></legend>
+               <p id="popupMsg">popup message goes here</p>
+               <input class="buttonStyle" id="okButton" type = "submit" name ="navButtons" value ="OK" />
+           </fieldset>
+       </form>
         <footer> </footer>
 
 
