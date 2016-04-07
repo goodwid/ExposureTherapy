@@ -20,7 +20,7 @@ var image3a = new Image('spiders/3a.png');
 var image3b = new Image('spiders/3b.png');
 var image3c = new Image('spiders/3c.png');
 
-var image4a = new Image('spiders/4a.jpg');
+var image4a = new Image('spiders/4a.png');
 var image4b = new Image('spiders/4b.jpg');
 var image4c = new Image('spiders/4c.jpg');
 

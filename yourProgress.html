@@ -36,7 +36,7 @@
                     <span class="userName"></span>, the chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don't get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You're working to conquer your fear, <span class="userName"></span>, and you should be proud of that!
                 </p>
 
-                <canvas id=achieveChart></canvas>
+                <div id="achieveChart"></div>
             </section>
 
             <section id="formPopup">
@@ -53,7 +53,7 @@
                            <p>
                                How anxious or uncomfortable would you feel...
                            </p>
-                       </div>  <!--#instructions-->
+                       </div>
                        <div id="q1">
                            <p class="questionTxt">...if you were to read a non-illustrated, informational article about spiders?
                            <label class="radio-inline"><input class="q1" type=radio name="q1" value="1">1</label>
@@ -67,7 +67,7 @@
                            <label class="radio-inline"><input class="q1" type=radio name="q1" value="9">9</label>
                            <label class="radio-inline"><input class="q1" type=radio name="q1" value="10">10</label>
                            </p>
-                       </div>  <!--#q1-->
+                       </div>
                        <div id="q2">
                            <p class="questionTxt">...if you looked at a photograph of a spider?
                            <label class="radio-inline"><input class="q2" type=radio name="q2" value="1">1</label>
@@ -81,7 +81,7 @@
                            <label class="radio-inline"><input class="q2" type=radio name="q2" value="9">9</label>
                            <label class="radio-inline"><input class="q2" type=radio name="q2" value="10">10</label>
                            </p>
-                       </div>  <!--#q2-->
+                       </div>
                        <div id="q3">
                            <p class="questionTxt">...if you saw a spider and knew for certain it was NOT dangerous to humans?
                            <label class="radio-inline"><input class="q3" type=radio name="q3" value="1">1</label>
@@ -95,7 +95,7 @@
                            <label class="radio-inline"><input class="q3" type=radio name="q3" value="9">9</label>
                            <label class="radio-inline"><input class="q3" type=radio name="q3" value="10">10</label>
                            </p>
-                       </div>  <!--#q3-->
+                       </div>
                        <div id="q4">
                            <p class="questionTxt">...if you saw a live spider 10 feet away from you?
                            <label class="radio-inline"><input class="q4" type=radio name="q4" value="1">1</label>
@@ -109,7 +109,7 @@
                            <label class="radio-inline"><input class="q4" type=radio name="q4" value="9">9</label>
                            <label class="radio-inline"><input class="q4" type=radio name="q4" value="10">10</label>
                            </p>
-                       </div>  <!--#q4-->
+                       </div>
                        <div id="q5">
                            <p class="questionTxt">...if you watched another person pick up a live spider?
                            <label class="radio-inline"><input class="q5" type=radio name="q5" value="1">1</label>
@@ -123,14 +123,16 @@
                            <label class="radio-inline"><input class="q5" type=radio name="q5" value="9">9</label>
                            <label class="radio-inline"><input class="q5" type=radio name="q5" value="10">10</label>
                            </p>
-                       </div>  <!--#q5-->
-                       <input id="submitProgressForm" class="buttonStyle"  value="Submit"/>
+                       </div>
+                       <input id="submitButton" class="buttonStyle"  value="Submit"/>
                    </fieldset>
-               </form>  <!--#progressForm-->
-            </section>  <!--#popupBox-->
+               </form>  <!--#progressForm -->
+           </section>  <!--#formPopup-->
 
         </section> <!-- mainContent -->
-
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <script src="js/util.js"></script>
         <script src="js/app.js"></script>
         <script src="js/progress.js"></script>
