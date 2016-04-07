@@ -44,13 +44,13 @@ var image9a = new Image('spiders/9a.jpg');
 var image9b = new Image('spiders/9b.png');
 var image9c = new Image('spiders/9c.jpg');
 
-var image10a = new Image('spiders/10a.png');
-var image10b = new Image('spiders/10b.png');
-var image10c = new Image('spiders/10c.png');
+var image10a = new Image('spiders/10a.mp4');
+var image10b = new Image('spiders/10b.mp4');
+var image10c = new Image('spiders/10c.mp4');
 
-var image11a = new Image('spiders/11a.png');
-var image11b = new Image('spiders/11b.png');
-var image11c = new Image('spiders/11c.png');
+var image11a = new Image('spiders/11a.mp4');
+var image11b = new Image('spiders/11b.mp4');
+var image11c = new Image('spiders/11c.mp4');
 
 //Array of images
 var imageArray = [
