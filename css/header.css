@@ -59,7 +59,7 @@ nav ul {
     width: 40%;
     justify-content: center;
     list-style-type: none;
-    font-family: "Century Gothic";
+
     margin-top: 70px;
 }
 
@@ -75,6 +75,7 @@ nav li a{
     border: 1px solid white;
     padding: 4px;
     border-radius: 5px;
+    font-family: "Century Gothic", sans-serif;
 }
 
 
