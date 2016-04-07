@@ -92,6 +92,8 @@ if (evalformButton) {
                 storeUserInfo();
                 hideForm();
                 showExercise();
+                displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
+                indicateLevel();
             }
         }
 
