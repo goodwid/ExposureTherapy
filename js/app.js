@@ -59,9 +59,9 @@ initUserInfo();
 
 var progressForm = gebi('progressForm');
 var progressFormButton = gebi('submitProgressForm');
-if (progressFormButton) {
-    progressFormButton.addEventListener('click', processProgressForm);
-}
+// if (progressFormButton) {
+//     progressFormButton.addEventListener('click', processProgressForm);
+// }
 var spanEls = document.getElementsByClassName('userName');
 
 var evalform = gebi('questionForm');
