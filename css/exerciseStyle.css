@@ -36,6 +36,9 @@ body{
     padding: 25px;
     border-radius: 10px;
 }
+video{
+    display: none;
+}
 
 #imageIndicator{
     padding-top; 5px;
