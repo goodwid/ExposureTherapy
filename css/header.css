@@ -62,7 +62,9 @@ nav ul {
     font-family: "Century Gothic";
     margin-top: 70px;
 }
-
+nav li {
+    margin: 5px;
+}
 nav li a{
     text-decoration: none;
     color: white;
