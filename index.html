@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8"></meta>
         <title>Conquer It!</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/homePageStyle.css">
+                <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <header>
@@ -25,47 +26,65 @@
             <div id="menuBorder"></div>
         </header>
         <section id="mainContent">
-            <section id="title">
-                <h2>Welcome to Conquer It!</h2>
-                <p>
-                    Welcome to Conquer It!, the web app that helps you conquer your phobia. First, let us congratulate you. Phobias are no joke, and we understand that it takes courage to work toward overcoming them. Well done taking the first step!</br></br>Don't feel like you have to dive right into the exercises. Take a moment to read about our methodology below. A big part of getting started with Conquer It! is familiarizing yourself with how the exercises work. They're quite simple, but we want to make sure you're armed with the information you need before beginning the Conquer It! program so that you have the best possible chance of success. We're rooting for you!
-                </p>
-            </section>
-            <section id="howitworks">
-                <h2>How It Works</h2>
-                <p>
-                    The Conquer It! program uses what the psychotherapy world calls exposure therapy. Exposure therapy is a process of very gradually exposing a phobia sufferer to the entity or situation that is the cause of the person's anxiety. An example best illustrates the point:
-                </p>
-                <p>
+
+            <div id="titleImage">
+                <div id="titleWrapper">
+                    <div id="title">
+                        <h2>Welcome to Conquer It!</h2>
+                    </div>
+
+                    <div id="welcomeText"
+                        <p>
+                        Welcome to Conquer It!, the web app that helps you conquer your phobia. First, let us congratulate you. Phobias are no joke, and we understand that it takes courage to work toward overcoming them. Well done taking the first step!</br></br>Don't feel like you have to dive right into the exercises. Take a moment to read about our methodology below. A big part of getting started with Conquer It! is familiarizing yourself with how the exercises work. They're quite simple, but we want to make sure you're armed with the information you need before beginning the Conquer It! program so that you have the best possible chance of success. We're rooting for you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <section id="howitWorks">
+                <div id="howitworksContent">
+                    <h2 id="howitworksTitle">How It Works</h2>
+
+                    <p id="content">
+                    The Conquer It! program uses what the psychotherapy world calls exposure therapy. Exposure therapy is a process of very gradually exposing a phobia sufferer to the entity or situation that is the cause of the person's anxiety.
+                    </p>
+
+                    <p id="exampleTitle">
+                    Here's an Example...
+                    </p>
+                </div>
+
+                <div id="howitworksExample">
+                    <p class="howitworksText">
                     Mary has cynophobia, a crippling fear of dogs. Her exposure therapy might consist of first looking at a very rough sketch of a dog. Once she can view the sketch with little or no discomfort, she moves on to a more life-like sketch of a dog. The next step might involve looking a photograph of a dog. The next, looking at a real, living dog but from 100 feet away. The next several steps in Mary's exposure therapy program might involve getting increasingly close to the dog and then, once she's comfortable, touching the dog.
-                </p>
-                <p>
+                    </p>
+                    <p class="howitworksText">
                     Just like Mary can gradually - over a period of hours, days, weeks, or months - become more comfortable with dogs, you can become more comfortable with the idea, sight, or presence of spiders. The Conquer It! exercises will expose you to increasingly realistic imagery at a pace that YOU - not us - set. As you become comfortable with each level of imagery, you will use buttons to advance to the next level or, if you become uncomfortable, to return to the previous level and spend more time with images that are less likely to make you feel fearful.
-                </p>
+                    </p>
 
-                <div id="dogs">
-                <figure class="dogs" id="easyDog">
-                    <img src="images/dogs/easyDog.png">
-                </figure>
-                <figure class="dogs" id="medDog">
-                    <img src="images/dogs/mediumDog.png">
-                </figure>
-                <figure class="dogs" id="photoDog">
-                    <img src="images/dogs/photoDog.jpg">
-                </figure>
-            </div></br></br>
 
-                <p>
+                    <div id="dogs">
+                        <img src="images\dogs\allDogs.png" />
+                    </div>
+                </div>
+
+                <div id="conclusion">
+                <p class="conclusionText">
                     If all of this makes you feel overwhelmed, we understand. Fear is a very strong emotion. But just remember that with Conquer It! you are always in control of your progress through the program. You will never be presented with images unexpectedly, and at every step you will have easy access to a sort of panic button that will remove any discomfiting image from view.
                 </p>
-                <p>
+                <p class="conclusionText" id="conclusionP2">
                     We encourage you to check out our Resources page before beginning the exercises. There you can learn about phobias and how much power you have to overcome them. Plus you'll find links to other helpful resources like articles and phobia support group websites.
                 </p>
-                <p>
+                <p class="conclusionText">
                     Congratulations again on taking this important step toward conquering your fear. We know that you're going to have great success as you work through the Conquer It! program.
                 </p>
+
+                <a href="exercises.html"><img id="getStartedButton" src="images\kimImgs\getStarted.png" /></a>
+
+            </div>
             </section>
         </section> <!-- end of main content -->
+
         <footer>
 
         </footer>
