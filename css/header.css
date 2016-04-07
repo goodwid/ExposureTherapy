@@ -19,7 +19,7 @@ bigbutton {
     height: auto;
     position: fixed;
     z-index: 10;
-    left: 230px;
+    left: 16%;
     top: 16px;
 }
 
@@ -28,7 +28,7 @@ bigbutton {
     height: auto;
     position: fixed;
     z-index: 10;
-    left: 210px;
+    left: 14%;
     top: 125px;
 }
 
@@ -60,7 +60,7 @@ nav ul {
     justify-content: center;
     list-style-type: none;
     font-family: "Century Gothic";
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 nav li a{
