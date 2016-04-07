@@ -97,9 +97,18 @@ video{
     height:23px;
 }
 
+#popupBox {
+    position: relative;
+    top: -350px;
+    max-width: 815px;
+    min-height: 472px;
+}
+
 fieldset {
     padding: 0 30px 30px 30px;
     color: #FFF;
+    border-radius: 5px;
+    min-height: 350px;
 }
 
 input[name=navButtons]{
