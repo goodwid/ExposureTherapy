@@ -32,6 +32,13 @@ body {
     width: 100%;
 }
 
+#formPopup {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: scroll;
+}
+
 #progressForm {
     display: flex;
     justify-content: center;
@@ -43,7 +50,7 @@ body {
     background-color: #609C9A;
     border-radius: 10px;
     box-shadow: 15px 15px 25px gray;
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 50px;
     border: 2px solid rgb(114, 94, 94);
 }
@@ -85,14 +92,23 @@ body {
 #chartContainer {
     width: 65%;
     display: none;
-    margin: 0 auto;
     position: fixed;
-    margin-top: 185px;
+    top: 165px;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    text-align: center;
+    padding: 50px 100px;
 }
 
 #chartContainer div {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     width: 100%;
+}
+
+#chartContainer p {
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 #mainContent{
