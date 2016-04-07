@@ -6,6 +6,7 @@ header {
     margin: 0 auto;
     text-align: center;
     background-color: #877676;
+    z-index: 9;
 }
 
 bigbutton {
@@ -32,9 +33,9 @@ bigbutton {
 }
 
 #HeaderWrapper{
-    width: 80%;
+    /*width: 80%;*/
     height: 120px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     background-color: #877676;
 }
@@ -56,13 +57,13 @@ nav {
 nav ul {
     display: flex;
     width: 40%;
-    justify-content:space-between;
+    justify-content: center;
     list-style-type: none;
     font-family: "Century Gothic";
     margin-top: 40px;
 }
 
-li a{
+nav li a{
     text-decoration: none;
     color: white;
     font-size: 14px;
@@ -72,7 +73,7 @@ li a{
     border-radius: 5px;
 }
 
-li a:hover{
+nav li a:hover{
     background-color: #b2f9ed;
     /*padding: 10px;*/
     color: #725e5e;
