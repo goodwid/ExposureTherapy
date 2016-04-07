@@ -15,7 +15,11 @@ body {
 }
 
 #mainContent{
-    background-color: red;
+    background-color: lightyellow;
+    position: relative;
+    top: 180px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 h1 {
@@ -45,13 +49,6 @@ a {
     border-radius: 3px;
     text-align: center;
     clear: both;
-}
-
-#mainContent {
-    position: relative;
-    top: 180px;
-    width: 75%;
-    margin: 0 auto;
 }
 
 section {
@@ -115,4 +112,15 @@ img {
 }
 #achieveChart {
     display: none;
+}
+
+/*TAYLOR'S STYLING*/
+.questionTxt, .tfquestionTxt {
+    padding: 0;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.radio-inline {
+    padding-left: 10px;
 }
