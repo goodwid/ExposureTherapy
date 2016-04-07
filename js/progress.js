@@ -1,8 +1,8 @@
 
-function showQuestionnaire() {
-    chartSection.style.display = 'none';
-    formPopup.style.display = 'block';
-}
+// function showQuestionnaire() {
+//     chartSection.style.display = 'none';
+//     formPopup.style.display = 'block';
+// }
 
 function showCharts() {
     if (!userInfo.evalComplete) {
@@ -33,16 +33,28 @@ function processQuestionnaire() {
 
 function generateLevelChartData() {
     var chartData = {};
+    dataLength = userInfo.previousVisitLevels.length;
+    var labels = [];
+    var tempdata = [];
     chartData.barColor = '#b2f9ed';
-    chartData.labels = [];
-    chartData.labels.push('Starting Point');
-    for (var aa=1; aa <= userInfo.previousVisitLevels.length; aa++) {
-        chartData.labels.push('Visit ' + aa);
+    chartData.dataPoints = [];
+
+    labels.push('Starting Point');
+    for (var aa=1; aa <= dataLength; aa++) {
+        labels.push('Visit ' + aa);
+    }
+    if (dataLength >10) {
+        tempdata[0] = userInfo.previousVisitLevels[0];
+        tempdata.push(userInfo.previousVisitLevels.slice(-10));    // Grab last 10
+    } else {
+        tempdata = userInfo.previousVisitLevels;
+    }
+    for (var i=0;i < Math.max(labels.length, tempdata.length) ;i++) {
+        chartData.dataPoints.push([labels[i],tempdata[i]]);
     }
     chartData.chartTitle = 'Highest Level Reached By Visit'
     chartData.axisTitle = 'Highest Level Reached';
-    chartData.dataPoints = [userInfo.previousVisitLevels[0]];
-    chartData.dataPoints = userInfo.previousVisitLevels.slice(Math.max(userInfo.previousVisitLevels.length-10,0));    // Grab last 10
+
     // chartData.chartTitle = 'Summary of Visit Levels';
 
     return chartData;
@@ -69,7 +81,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
     $('#levelChart').highcharts({
         chart: {
             Type: 'column',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#E0CCD3'
         },
         title: {
             text: data.chartTitle
@@ -85,6 +97,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
                     fontSize: '13px',
                     fontFamily: 'Verdana, sans-serif'
                 }
+
             },
             crosshair: true
         },
@@ -99,7 +112,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
                 title: {
                     text: data.AxisTitle,
                     style: {
-                        color: Highcharts.getOptions().colors[1]
+                        color: '#E0CCD3'
                     }
                 }
             },
@@ -138,7 +151,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
     $('#phobiaChart').highcharts({
         chart: {
             Type: 'column',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#E0CCD3'
         },
         title: {
             text: data.chartTitle
