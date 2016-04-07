@@ -19,7 +19,7 @@
     padding-top: 200px;
     padding-bottom: 200px;
 }
-
+ exp
 #title{
     font-size: 48px;
     margin: 45px 45px 0 65px;
@@ -32,24 +32,25 @@
     font-size: 14px;
     padding-top: 70px;
     max-width: 950px;
+    font-weight: bolder;
 }
 
 #howitWorks{
     background-image: url("../images/kimImgs/wov.png");
-
+    margin-top: -55px;
 }
 
 #howitworksTitle{
     font-size: 48px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 45px;
 }
 
 #howitworksContent{
     background-color: #327c7a;
     color: white;
     text-align: center;
-    padding: 15px 150px 40px 150px;
+    padding: 0px 150px 60px 150px;
     line-height: 24px;
 
 }
