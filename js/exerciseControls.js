@@ -136,7 +136,7 @@ function indicateLevel (){
 
 
 
-var todaysHighestLevel = userInfo.lastLevelIndex;
+var todaysHighestLevel = 1;
 var nextLevel = gebi("nextLevelButton");
 var simImages = gebi("simImagesButton");
 var lastLevel = gebi("lastLevelButton");
@@ -162,8 +162,10 @@ if (!localStorage.userInfo) {
 }
 
 window.onbeforeunload = function () {
-    userInfo.previousVisitLevels.push(todaysHighestLevel);
-    storeUserInfo();
+    if (userInfo.evalComplete === true) {
+        userInfo.previousVisitLevels.push(todaysHighestLevel);
+        storeUserInfo();
+    }
 }
 
 panic.addEventListener("click", showPanicImage, false);
