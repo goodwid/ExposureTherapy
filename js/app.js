@@ -33,8 +33,17 @@ function processProgressForm() {
 
 function displayImage(level,index) {
     var imageEl = gebi('mainImage');
+    var videoEl = gebi('video');
     var imagePath = imageArray[level][index].path;
+    if (level < 10){
     imageEl.setAttribute('src',imagePath);
+    imageEl.style.display="block";
+    videoEl.style.display='none';
+}  else {
+    videoEl.setAttribute('src',imagePath);
+    imageEl.style.display='none';
+    videoEl.style.display='block';
+    }
 }
 
 function storeUserInfo() {
