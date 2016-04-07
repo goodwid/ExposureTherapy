@@ -39,17 +39,21 @@ function goLastLevel () {
 
 //----------------------------------------------------------------------------------------------------------------------------
 
-//similar images button functionality
+//similar images/resume button functionality
 function changeImage () {
-    if (userInfo.lastImageIndex ===2){
-        userInfo.lastImageIndex = 0;
+    if (simImagesButton.value=="Resume") {
+        userInfo.lastImageIndex = userInfo.lastImageIndex;
         indicateLevel();
         resumeFromPanicPage();
-    } else {
-        userInfo.lastImageIndex = userInfo.lastImageIndex +1;
-        indicateLevel();
-        resumeFromPanicPage();
-    }
+    } else if (userInfo.lastImageIndex ===2){
+          userInfo.lastImageIndex = 0;
+          indicateLevel();
+          resumeFromPanicPage();
+      } else {
+            userInfo.lastImageIndex = userInfo.lastImageIndex +1;
+            indicateLevel();
+            resumeFromPanicPage();
+        }
 
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
     storeUserInfo();
