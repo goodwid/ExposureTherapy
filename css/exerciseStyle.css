@@ -23,7 +23,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -45px;
-    top: 165px;
+    top: 180px;
 }
 
 #mainImage{
@@ -94,14 +94,15 @@ input[name=navButtons]:hover{
 form {
     padding: 20px;
     display: none;
-    height: 500px;
-    width: 40%;
-    position: absolute;
-    top: 100px;
-    text-align: center;
+    height: auto;
+    width: 75%;
+    position: relative;
+    top: 185px;
+    /*text-align: center;*/
     background-color: #877676;
     border-radius: 10px;
-    left: 280px;
+    margin: 0 auto;
+    /*left: 20%;*/
     box-shadow: 5px 5px 5px #898989;
 }
 fieldset{
