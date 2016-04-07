@@ -10,6 +10,9 @@ function goNextLevel () {
             popupMsg.innerHTML = "This is actually the last level. Congratulations, <span class='userName'></span>, you made it! Check out our Resources page if you're interested in further treatment options."
     } else {
         userInfo.lastLevelIndex= userInfo.lastLevelIndex + 1;
+        if (userInfo.lastLevelIndex > todaysHighestLevel) {
+            todaysHighestLevel = userInfo.lastLevelIndex;
+        }
         displayImage(userInfo.lastLevelIndex,0);
         indicateLevel();
         storeUserInfo();
@@ -29,7 +32,6 @@ function goLastLevel () {
         displayImage(userInfo.lastLevelIndex,0);
         indicateLevel();
         storeUserInfo();
-        console.log(image.path);
     }
 }
 
@@ -109,7 +111,7 @@ function indicateLevel (){
 
 
 
-
+var todaysHighestLevel = userInfo.lastLevelIndex;
 var nextLevel = gebi("nextLevelButton");
 var simImages = gebi("simImagesButton");
 var lastLevel = gebi("lastLevelButton");
@@ -133,6 +135,10 @@ if (!localStorage.userInfo) {
     indicateLevel();
 }
 
+window.onbeforeunload = function () {
+    userInfo.previousVisitLevels.push(todaysHighestLevel);
+    storeUserInfo();
+}
 
 panic.addEventListener("click", showPanicImage, false);
 nextLevel.addEventListener("click", goNextLevel ,false);
