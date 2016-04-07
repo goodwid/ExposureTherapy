@@ -10,6 +10,7 @@ function goNextLevel () {
             popupMsg.innerHTML = "This is actually the last level. Congratulations, <span class='userName'></span>, you made it! Check out our Resources page if you're interested in further treatment options."
     } else {
         userInfo.lastLevelIndex= userInfo.lastLevelIndex + 1;
+        userInfo.lastImageIndex=0;
         if (userInfo.lastLevelIndex > todaysHighestLevel) {
             todaysHighestLevel = userInfo.lastLevelIndex;
         }
@@ -29,6 +30,7 @@ function goLastLevel () {
             popupMsg.textContent = "Sorry, you're at the first level. If these images are too unsettling, Conquer It! may not be for you. Check out our Resources page for links to sites that discuss other phobia treatment options, including support groups."
     } else {
         userInfo.lastLevelIndex= userInfo.lastLevelIndex - 1;
+        userInfo.lastImageIndex=0;
         displayImage(userInfo.lastLevelIndex,0);
         indicateLevel();
         storeUserInfo();
@@ -42,9 +44,11 @@ function changeImage () {
     if (userInfo.lastImageIndex ===2){
         userInfo.lastImageIndex = 0;
         indicateLevel();
+        resumeFromPanicPage();
     } else {
         userInfo.lastImageIndex = userInfo.lastImageIndex +1;
         indicateLevel();
+        resumeFromPanicPage();
     }
 
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
@@ -72,7 +76,23 @@ function showHelp (){
 //display panic image
 function showPanicImage() {
     displayImage(0, userInfo.panicImageIndex);
+    layoutPanicPage();
 }
+
+function layoutPanicPage () {
+    lastLevelButton.style.visibility="hidden";
+    nextLevelButton.style.visibility="hidden";
+    simImagesButton.value="Resume";
+    locationDiv.style.visibility="hidden";
+}
+
+function resumeFromPanicPage() {
+    lastLevelButton.style.visibility="visible";
+    nextLevelButton.style.visibility="visible";
+    simImagesButton.value="Similar Images";
+    locationDiv.style.visibility="visible";
+}
+
 
 //##################### SHOW AND HIDE POPUPS ##################################################################################
 //display popup
@@ -126,6 +146,7 @@ var help           = gebi("help");
 var panic          = gebi("panic");
 var questionForm   = gebi('questionForm');
 var exercisePage   = gebi('exercisePage');
+var locationDiv    = gebi('location');
 
 if (!localStorage.userInfo) {
     showForm();
