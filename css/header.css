@@ -37,11 +37,11 @@ bigbutton {
     height: 120px;
     margin: 0 auto;
     text-align: center;
-    background-color: #877676;
+    background-color: #CAB8BE;
 }
 
 #menuBorder{
-    background-color: #725e5e;
+    background-color: rgb(114, 94, 94);
     height: 45px;
     position: relative;
     width: 100%;
