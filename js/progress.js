@@ -13,7 +13,6 @@ function showQuestionnaire() {
 function showCharts() {
     if (!userInfo.evalComplete) {
         chartIntro.textContent = 'The chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don\'t get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You\'re working to conquer your fear, and you should be proud of that!';
-        console.log('chartIntro should be changed');
     }
     formPopup.style.display = 'none';
     chartSection.style.display = 'flex';
