@@ -29,3 +29,7 @@ Our intended user utilizes our application to address what in many cases is a de
 * As developers we want to build an app whose structure lends itself to expansion to include exercises for people suffering from other types of phobias. Such an expansion would include an option on the Get Started page for the user to select from a list of phobias, each of which directs the user to a different set of exercises.
 * As developers we want to create an app that makes the user feel encouraged and not pressured to advance through the different exposure levels.
 * As developers we want to create an app that feels personal by consistently using the user's name in output messages.
+
+#### Deployed location:
+http://goodwid.github.io/ExposureTherapy/
+
