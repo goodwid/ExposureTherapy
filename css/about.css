@@ -1,0 +1,47 @@
+@import url("header.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    background-color: #327c7a;
+}
+
+h3{
+    /*position: absolute;*/
+    /*top: 200px;*/
+    /*width: 50%;*/
+    /*text-align: center;*/
+    font-size: 48px;
+    /*left: 620px;*/
+    color: white;
+    padding-bottom: 25px;
+}
+
+#mainText{
+        position: absolute;
+        top:180px;
+        left: 800px;
+        width: 40%;
+        color: white;
+        text-align: justify;
+}
+#ourNames{
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+}
+
+#ourNamesWrapper{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
