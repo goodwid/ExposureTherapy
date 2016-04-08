@@ -128,6 +128,7 @@ function hidePopup (){
     navPopup.style.display="none";
     mainImage.style.visibility = "visible";
 }
+
 //set level and image indicators on exercise page
 function indicateLevel (){
     levelIndicator.textContent = userInfo.lastLevelIndex;
@@ -137,14 +138,14 @@ function indicateLevel (){
 
 
 var todaysHighestLevel = 1;
-var nextLevel = gebi("nextLevelButton");
-var simImages = gebi("simImagesButton");
-var lastLevel = gebi("lastLevelButton");
-var popupBox  = gebi("popupBox");
-var popupMsg  = gebi("popupMsg");
-var welcome   = gebi("welcomeMsg");
-var okButton  = gebi("okButton");
-var mainImage = gebi("mainImage");
+var nextLevel =      gebi("nextLevelButton");
+var simImages =      gebi("simImagesButton");
+var lastLevel =      gebi("lastLevelButton");
+var popupBox  =      gebi("popupBox");
+var popupMsg  =      gebi("popupMsg");
+var welcome   =      gebi("welcomeMsg");
+var okButton  =      gebi("okButton");
+var mainImage =      gebi("mainImage");
 var levelIndicator = gebi("levelIndicator");
 var imageIndicator = gebi("imageIndicator");
 var help           = gebi("help");
@@ -159,6 +160,7 @@ if (!localStorage.userInfo) {
 } else {
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
     indicateLevel();
+    showBuffer();
 }
 
 window.onbeforeunload = function () {
