@@ -1,5 +1,27 @@
 var userInfo = {};
 
+////////////////////////////////  BUFFER  ////////////////////////////////
+
+var bufferDiv = gebi('buffer');
+var continueButton = gebi('continueButton');
+//CONTINUE BUTTON ON BUFFER TO HIDE BUFFER
+if (bufferDiv) {
+    continueButton.addEventListener("click", removeBuffer, false);
+}
+
+function showBuffer() {
+    bufferDiv.style.display = 'block';
+}
+
+function removeBuffer() {
+    bufferDiv.className = 'reveal';
+    setTimeout(function() {
+        bufferDiv.style.display = 'none';
+    }, 2000);
+}
+
+////////////////////////////////  BUFFER  ////////////////////////////////
+
 function initUserInfo() {
     if (localStorage.userInfo) {
         userInfo = JSON.parse(localStorage.userInfo);
@@ -105,6 +127,7 @@ if (evalformButton) {
                 userInfo.previousVisitAnxiety.push(anxietyIndex);
                 storeUserInfo();
                 hideForm();
+                showBuffer();
                 showExercise();
                 displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
                 indicateLevel();

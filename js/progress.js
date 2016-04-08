@@ -1,17 +1,14 @@
 
-function showQuestionnaire() {
-    chartSection.style.display = 'none';
-    formPopup.style.display = 'block';
-}
+// function showQuestionnaire() {
+//     chartSection.style.display = 'none';
+//     formPopup.style.display = 'block';
+// }
 
 function showCharts() {
-    if (!userInfo.evalComplete) {
-        chartIntro.textContent = 'The chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don\'t get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You\'re working to conquer your fear, and you should be proud of that!';
-    }
     hideEl(formPopup);
     showEl(chartContainer);
-    createLevelChart (generateLevelChartData());
-    createPhobiaChart (generatePhobiaChartData());
+    createLevelChart (generateChartData(userInfo.previousVisitLevels));
+    createPhobiaChart (generateChartData(userInfo.previousVisitAnxiety));
 
 }
 
@@ -31,48 +28,45 @@ function processQuestionnaire() {
     showCharts();
 }
 
-function generateLevelChartData() {
+function generateChartData(data) {
     var chartData = {};
+    dataLength = data.length;
+    var labels = [];
+    var templabels = [];
+    var tempdata = [];
+    chartData.barColor = '#b2f9ed';
+    chartData.dataPoints = [];
 
-    chartData.labels = [];
-    chartData.labels.push('Starting Point');
-    for (var aa=1; aa <= userInfo.previousVisitLevels.length; aa++) {
-        chartData.labels.push('Visit ' + aa);
+    templabels.push('Starting Point');
+    for (var aa=1; aa <= dataLength; aa++) {
+        templabels.push('Visit ' + aa);
     }
-    chartData.chartTitle = 'Highest Level Reached By Visit'
-    chartData.axisTitle = 'Highest Level Reached';
-    chartData.dataPoints = [userInfo.previousVisitLevels[0]];
-    chartData.dataPoints = userInfo.previousVisitLevels.slice(Math.max(userInfo.previousVisitLevels.length-10,0));    // Grab last 10
-    // chartData.chartTitle = 'Summary of Visit Levels';
+    if (dataLength >10) {
+        labels[0] = templabels[0];
+        labels = labels.concat(templabels.slice(-10));
+        tempdata[0] = data[0];
+        tempdata = tempdata.concat(data.slice(-10));    // Grab last 10 elements of the array.
+    } else {
+        tempdata = data;
+        labels = templabels;
+    }
+    for (var i=0;i < Math.min(labels.length, tempdata.length) ;i++) {
+        chartData.dataPoints.push([labels[i],tempdata[i]]);
+    }
 
     return chartData;
 }
 
-function generatePhobiaChartData() {
-    var chartData = {};
 
-    chartData.labels = [];
-    chartData.labels.push('Starting Point');
-    for (var bb=1; bb <= userInfo.previousVisitAnxiety.length; bb++) {
-        chartData.labels.push('Visit ' + bb);
-    }
-    chartData.chartTitle = 'Phobic Index By Visit'
-    chartData.axisTitle = 'Phobic Index';
-    chartData.dataPoints = [userInfo.previousVisitAnxiety[0]];
-    chartData.dataPoints = userInfo.previousVisitAnxiety.slice(Math.max(userInfo.previousVisitAnxiety.length-10,0));   // grab only the last 10 data points.
-    // chartData.chartTitle = 'Summary of Phobic Index';
-
-    return chartData;
-}
 
 function createLevelChart(data) {   // uses highcharts to display data, function taken from snippet on highcharts' website and modded.
     $('#levelChart').highcharts({
         chart: {
             Type: 'column',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#E0CCD3'
         },
         title: {
-            text: data.chartTitle
+            text: 'Highest Level Reached By Visit'
         },
         subtitle: {
             text: '(showing the last 10 visits)'
@@ -85,6 +79,7 @@ function createLevelChart(data) {   // uses highcharts to display data, function
                     fontSize: '13px',
                     fontFamily: 'Verdana, sans-serif'
                 }
+
             },
             crosshair: true
         },
@@ -97,9 +92,9 @@ function createLevelChart(data) {   // uses highcharts to display data, function
                     // }
                 },
                 title: {
-                    text: data.AxisTitle,
+                    text: 'Highest Level Reached',
                     style: {
-                        color: Highcharts.getOptions().colors[1]
+                        color: '#E0CCD3'
                     }
                 }
             },
@@ -111,10 +106,10 @@ function createLevelChart(data) {   // uses highcharts to display data, function
             enabled: false
         },
         series: [{
-            name: data.axisTitle,
+            name: 'Highest Level Reached',
             data: data.dataPoints,
             type: 'column',
-            color: '#00041F',
+            color: data.barColor,
             tooltip: {
                 valueSuffix: ''
             },
@@ -138,10 +133,10 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
     $('#phobiaChart').highcharts({
         chart: {
             Type: 'column',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#E0CCD3'
         },
         title: {
-            text: data.chartTitle
+            text: 'Phobic Index By Visit'
         },
         subtitle: {
             text: '(showing the last 10 visits)'
@@ -166,7 +161,7 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
                     // }
                 },
                 title: {
-                    text: data.AxisTitle,
+                    text: 'Phobic Index',
                     style: {
                         color: Highcharts.getOptions().colors[1]
                     }
@@ -180,10 +175,10 @@ function createPhobiaChart(data) {   // uses highcharts to display data, functio
             enabled: false
         },
         series: [{
-            name: data.axisTitle,
+            name: 'Phobic Index',
             data: data.dataPoints,
             type: 'column',
-            color: '#00041F',
+            color: data.barColor,
             tooltip: {
                 valueSuffix: ''
             },
@@ -214,7 +209,6 @@ function showEl(el) {
 var chartSection = gebi('chartSection');
 var formPopup = gebi('formPopup');
 var submitButton = gebi('submitButton');
-var chartIntro = gebi('chartIntro');
 var chartContainer = gebi('chartContainer');
 
 // hideEl(formPopup);

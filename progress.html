@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"></meta>
-        <title>Your Progress</title>
+        <title>My Progress</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script>
         if (!localStorage.userInfo) {
@@ -21,7 +21,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="aboutUs.html">About&nbsp;Us</a></li>
-                        <li><a href="yourProgress.html">My&nbsp;Progress</a></li>
+                        <li><a href="progress.html">My&nbsp;Progress</a></li>
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="exercises.html">Exercises</a></li>
                     </ul>
@@ -30,18 +30,19 @@
             <div id="menuBorder"></div>
         </header>
 
-        <section id="chartSection">
-            <h2>Your Progress</h2>
-            <p>
-                <span class="userName"></span>, the chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don't get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You're working to conquer your fear, <span class="userName"></span>, and you should be proud of that!
-            </p>
+        <!-- <section id="chartSection"> -->
+
 
             <div id="chartContainer">
+                <h2>How You're Doing</h2>
+                <p>
+                    <span class="userName"></span>, the chart below shows the highest level reached for each of your past visits to Conquer It! If you see ups and downs, don't get discouraged. Remember that each visit to the Exercises page means progress, whether you advanced a level, stayed put, or returned to a previous level. You're working to conquer your fear, <span class="userName"></span>, and you should be proud of that!
+                </p>
                 <div id="levelChart"></div>
                 <div id="phobiaChart"></div>
             </div>
 
-        </section>
+        <!-- </section> -->
 
         <section id="formPopup">
             <div id="progressForm">
@@ -132,7 +133,7 @@
                        <label class="radio-inline"><input class="q5" type=radio name="q5" value="10">  10</label>
                    </div> <!--.radio-buttons-->
                </div>
-               <input id="submitButton" class="buttonStyle"  value="Submit"/>
+               <input id="submitButton" type="button" class="buttonStyle"  value="Submit"/>
            </div>  <!--#progressForm -->
        </section>  <!--#formPopup-->
 
