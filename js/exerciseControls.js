@@ -135,6 +135,11 @@ function indicateLevel (){
     imageIndicator.textContent = userInfo.lastImageIndex+1;
 }
 
+function panicShortcut(e) {   // handles space bar event handler.
+  if (e.keyCode == '32') {
+    showPanicImage();
+  }
+}
 
 
 var todaysHighestLevel = 1;
@@ -156,10 +161,10 @@ var locationDiv    = gebi('location');
 
 if (!localStorage.userInfo) {
     showForm();
-    console.log(userInfo);
 } else {
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
     indicateLevel();
+    window.addEventListener('keydown', panicShortcut);    //spacebar event listener to show panic image
 }
 
 window.onbeforeunload = function () {
@@ -177,10 +182,3 @@ lastLevel.addEventListener("click", goLastLevel ,false);
 
 //OK BUTTON ON FORM TO TRIGGER HIDE POPUP FUNCTION
 okButton.addEventListener("click", hidePopup, false);
-
-//spacebar event listener to show panic image
-window.addEventListener('keydown', function(e) {
-  if (e.keyCode == '32') {
-    showPanicImage();
-  }
-});

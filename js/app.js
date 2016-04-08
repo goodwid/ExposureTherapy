@@ -14,6 +14,7 @@ function showBuffer() {
 }
 
 function removeBuffer() {
+    window.addEventListener('keydown', panicShortcut);    //spacebar event listener to show panic image
     bufferDiv.className = 'reveal';
     setTimeout(function() {
         bufferDiv.style.display = 'none';
@@ -58,16 +59,16 @@ function displayImage(level,index) {
     var videoEl = gebi('video');
     var imgWrap = gebi('imgWrap');
     var imagePath = imageArray[level][index].path;
-    if (level < 10){
-    imageEl.setAttribute('src',imagePath);
-    imageEl.style.display="block";
-    videoEl.style.display='none';
-    imgWrap.style.backgroundColor="white";
-}  else {
-    videoEl.setAttribute('src',imagePath);
-    imageEl.style.display='none';
-    videoEl.style.display='block';
-    imgWrap.style.backgroundColor="black";
+    if (level < 10) {
+        imageEl.setAttribute('src',imagePath);
+        imageEl.style.display="block";
+        videoEl.style.display='none';
+        imgWrap.style.backgroundColor="white";
+    }  else {
+        videoEl.setAttribute('src',imagePath);
+        imageEl.style.display='none';
+        videoEl.style.display='block';
+        imgWrap.style.backgroundColor="black";
     }
 }
 
@@ -79,6 +80,7 @@ function storeUserInfo() {
 function capitalizeName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
+
 function gebi(el) { // gleefully stolen from Al!
     return document.getElementById(el);
 }
@@ -290,14 +292,6 @@ var chartContainer = gebi('chartContainer');
 if (submitButton) {
     submitButton.addEventListener('click', processQuestionnaire, false);
 }
-
-
-
-
-
-
-
-
 
 
 
