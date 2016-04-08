@@ -52,7 +52,7 @@ body{
     width: 100%;
     height: 100%;
     background-image: url("../images/kimImgs/wild_flowers.png");
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: 165px;
     z-index: 2;
@@ -75,14 +75,13 @@ body{
 
 .reveal {
     animation-name: moveIt;
-    animation-duration: 4s;
-    /*animation-timing-function: ease;*/
+    animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
 @keyframes moveIt {
     15% {top: 135px;}
-    100% {top: 2000px;}
+    100% {top: 1000px;}
 }
 
 video{
