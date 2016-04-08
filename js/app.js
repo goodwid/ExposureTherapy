@@ -5,7 +5,9 @@ var userInfo = {};
 var bufferDiv = gebi('buffer');
 var continueButton = gebi('continueButton');
 //CONTINUE BUTTON ON BUFFER TO HIDE BUFFER
-continueButton.addEventListener("click", removeBuffer, false);
+if (bufferDiv) {
+    continueButton.addEventListener("click", removeBuffer, false);
+}
 
 function showBuffer() {
     bufferDiv.style.display = 'block';
