@@ -70,7 +70,7 @@ function showHelp (){
     if (userInfo.exercisesBegun == false) {
         welcome.innerHTML = "Welcome, " + userInfo.userName + "!";
     } else {
-        welcome.innerHTML = "  Here's a refresher," + userInfo.userName + ":";
+        welcome.innerHTML = "  Here's how it works, " + userInfo.userName + ":";
     }
 
     popupMsg.innerHTML = "There are eleven levels of exposure.</br></br>Clicking the \"Similar Images\" button will allow you to move between three images within the current level. We recommend you spend some time with all three images at each level. Once you can view all three without feeling distressed, use the \"Next Level\" button to advance to the next set of three images.</br></br>If your anxiety reaches an uncomfortable level, use the \"Last Level\" button to return to the previous level or the panic button to instantly view the calming image you selected when you began the program.</br></br>Spend as much time as you need to with each image. This will be a gradual process for most."
@@ -102,7 +102,7 @@ function resumeFromPanicPage() {
 //##################### SHOW AND HIDE POPUPS ##################################################################################
 //display popup
 function showPopup (){
-    popupBox.style.display = "block";
+    popupBox.style.display = 'block';
     mainImage.style.visibility = 'hidden';
 }
 
@@ -125,7 +125,7 @@ function hideExercise() {
 }
 //hide popup when user clicks ok
 function hidePopup (){
-    navPopup.style.display="none";
+    popupBox.style.display = 'none';
     mainImage.style.visibility = "visible";
 }
 
@@ -160,7 +160,6 @@ if (!localStorage.userInfo) {
 } else {
     displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
     indicateLevel();
-    showBuffer();
 }
 
 window.onbeforeunload = function () {
