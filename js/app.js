@@ -1,28 +1,3 @@
-var userInfo = {};
-
-////////////////////////////////  BUFFER  ////////////////////////////////
-
-var bufferDiv = gebi('buffer');
-var continueButton = gebi('continueButton');
-//CONTINUE BUTTON ON BUFFER TO HIDE BUFFER
-if (bufferDiv) {
-    continueButton.addEventListener("click", removeBuffer, false);
-}
-
-function showBuffer() {
-    bufferDiv.style.display = 'block';
-}
-
-function removeBuffer() {
-    window.addEventListener('keydown', panicShortcut);    //spacebar event listener to show panic image
-    bufferDiv.className = 'reveal';
-    setTimeout(function() {
-        bufferDiv.style.display = 'none';
-    }, 2000);
-}
-
-////////////////////////////////  BUFFER  ////////////////////////////////
-
 function initUserInfo() {
     if (localStorage.userInfo) {
         userInfo = JSON.parse(localStorage.userInfo);
@@ -284,68 +259,71 @@ function showEl(el) {
     el.style.display = 'block';
 }
 
-var chartSection = gebi('chartSection');
-var formPopup = gebi('formPopup');
-var submitButton = gebi('submitButton');
-var chartContainer = gebi('chartContainer');
+function formHandler() {
+    var userName = evalform.elements.inputName.value;
+    var panicImageIndex = parseInt(evalform.elements.panicimage.value);
+    var phobia = evalform.elements.phobia.value;
+    if (phobia === 'other') {
+        alert('We regret that currently, Conquer It! only addresses arachnophobia.');
+        gebi('arach').checked = true;
+    } else {
+        if (!userName) {
+            alert('Username is required!  Please fill out your first name.');
+        } else {
+            userInfo.userName = capitalizeName(userName);
+            userInfo.panicImageIndex = panicImageIndex;
+            userInfo.evalComplete = true;
+
+            if (evalform.elements.q5.value === 'true') { userInfo.lastLevelIndex = 10;}
+            if (evalform.elements.q4.value === 'true') { userInfo.lastLevelIndex = 8;}
+            if (evalform.elements.q3.value === 'true') { userInfo.lastLevelIndex = 5;}
+            if (evalform.elements.q2.value === 'true') { userInfo.lastLevelIndex = 2;}
+            if (evalform.elements.q1.value === 'true') { userInfo.lastLevelIndex = 1;}
+
+            userInfo.previousVisitLevels.push (userInfo.lastLevelIndex);
+            var anxietyIndex = 0;
+            for (var cc=1; cc<=5; cc++) {
+                var qName = 'nq' + cc;
+                var inputEls = document.getElementsByClassName(qName);
+                for (var dd=0; dd<inputEls.length; dd++) {
+                    if (inputEls[dd].checked) {
+                        anxietyIndex += parseInt(inputEls[dd].value);
+                    }
+                }
+            }
+            userInfo.previousVisitAnxiety.push(anxietyIndex);
+            storeUserInfo();
+            hideForm();
+            showBuffer();
+            showExercise();
+            displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
+            indicateLevel();
+        }
+    }
+}
+
+var userInfo = {};
+var chartSection        = gebi('chartSection');
+var formPopup           = gebi('formPopup');
+var submitButton        = gebi('submitButton');
+var chartContainer      = gebi('chartContainer');
+var progressForm        = gebi('progressForm');
+var progressFormButton  = gebi('submitProgressForm');
+var evalform            = gebi('questionForm');
+var evalformButton      = gebi('submitForm');
+
+var spanEls = document.getElementsByClassName('userName');
+
+/*****************************
+    BEGINNING OF LOGIC
+****************************/
 
 if (submitButton) {
     submitButton.addEventListener('click', processQuestionnaire, false);
 }
 
-
-
-var progressForm = gebi('progressForm');
-var progressFormButton = gebi('submitProgressForm');
-
-var spanEls = document.getElementsByClassName('userName');
-
-var evalform = gebi('questionForm');
-var evalformButton = gebi('submitForm');
 if (evalformButton) {
-    evalformButton.addEventListener('click', function () {
-        var userName = evalform.elements.inputName.value;
-        var panicImageIndex = parseInt(evalform.elements.panicimage.value);
-        var phobia = evalform.elements.phobia.value;
-        if (phobia === 'other') {
-            alert('We regret that currently, Conquer It! only addresses arachnophobia.');
-            gebi('arach').checked = true;
-        } else {
-            if (!userName) {
-                alert('Username is required!  Please fill out your first name.');
-            } else {
-                userInfo.userName = capitalizeName(userName);
-                userInfo.panicImageIndex = panicImageIndex;
-                userInfo.evalComplete = true;
-
-                if (evalform.elements.q5.value === 'true') { userInfo.lastLevelIndex = 10;}
-                if (evalform.elements.q4.value === 'true') { userInfo.lastLevelIndex = 8;}
-                if (evalform.elements.q3.value === 'true') { userInfo.lastLevelIndex = 5;}
-                if (evalform.elements.q2.value === 'true') { userInfo.lastLevelIndex = 2;}
-                if (evalform.elements.q1.value === 'true') { userInfo.lastLevelIndex = 1;}
-
-                userInfo.previousVisitLevels.push (userInfo.lastLevelIndex);
-                var anxietyIndex = 0;
-                for (var cc=1; cc<=5; cc++) {
-                    var qName = 'nq' + cc;
-                    var inputEls = document.getElementsByClassName(qName);
-                    for (var dd=0; dd<inputEls.length; dd++) {
-                        if (inputEls[dd].checked) {
-                            anxietyIndex += parseInt(inputEls[dd].value);
-                        }
-                    }
-                }
-                userInfo.previousVisitAnxiety.push(anxietyIndex);
-                storeUserInfo();
-                hideForm();
-                showBuffer();
-                showExercise();
-                displayImage(userInfo.lastLevelIndex,userInfo.lastImageIndex);
-                indicateLevel();
-            }
-        }
-
-    })
+    evalformButton.addEventListener('click', formHandler);
 }
 
 initUserInfo();
