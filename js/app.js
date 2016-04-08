@@ -303,6 +303,7 @@ function formHandler() {
 }
 
 var userInfo = {};
+
 var chartSection        = gebi('chartSection');
 var formPopup           = gebi('formPopup');
 var submitButton        = gebi('submitButton');
