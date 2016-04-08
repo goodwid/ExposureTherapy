@@ -14,22 +14,22 @@
 }
 
 #titleWrapper{
-    background-color: rgba(150, 150, 150, 0.2);
+    background-color: rgba(150, 150, 150, 0.4);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
- exp
+
 #title{
-    font-size: 48px;
+    font-size: 32px;
     margin: 45px 45px 0 65px;
 }
 
 #welcomeText{
     text-align:justify;
     margin: 0 auto;
-    line-height: 28px;
-    font-size: 14px;
+    line-height: 22px;
+    font-size: 18px;
     padding-top: 70px;
     max-width: 950px;
     font-weight: bolder;
@@ -64,7 +64,7 @@
     text-align: justify;
 }
 #exampleTitle{
-    padding-top: 35px;
+    padding-bottom: 25px;
     font-size: 28px;
 }
 
@@ -74,6 +74,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     line-height: 24px;
+    font-weight: bolder;
 }
 .howitworksText{
     text-align: justify;
