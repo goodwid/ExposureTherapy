@@ -230,3 +230,17 @@ footer{
     margin: 0 auto;
     text-align: center;
 }
+
+.questionTxt, .tfquestionTxt {
+    padding: 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.questionEl {
+    margin-bottom: 20px;
+}
+
+.radio-inline {
+    margin-right: 10px;
+}
